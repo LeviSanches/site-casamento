@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --primary-color: #f6f2e7;
+    --secondary-color: #557c70;
+    --text-color: #a1775a;
+  }
+
+  html {
+    line-height: 1.15; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+  }
+  
+  body {
+    margin: 0;
+  }
+
+html {
+    background-color: var(--primary-color);
+}
