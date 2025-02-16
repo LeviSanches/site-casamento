@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'Amoresa';
+  src: url('assets/fonts/Andrey\ Sharonov\ -\ Amoresa\ Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;  
+}
+
+@font-face {
+  font-family: 'Artegra';
+  src: url('assets/fonts/Fontspring-DEMO-artegra_slab-400-regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;  
+}
+
 :root {
     --primary-color: #f6f2e7;
     --secondary-color: #557c70;
