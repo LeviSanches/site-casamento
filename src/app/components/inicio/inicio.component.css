@@ -1,12 +1,14 @@
+.container {
+    width: 100%;
+}
+
 .imagem-container {
     position: relative;
     display: inline-block;
 }
 
 .imagem-container img {
-    width: 100%;
-    /* Ou o tamanho desejado */
-    height: auto;
+    width: 2000px;
 }
 
 .texto-nomes {
@@ -36,8 +38,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 8rem;
+    margin-top: 6rem;
     padding: 5rem 12rem;
+    font-family: "Eb Garamond", serif;
 }
 
 .texto-container p{
