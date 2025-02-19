@@ -1,0 +1,38 @@
+.container {
+    background-image: url("/assets/fundo-localizacao.png");
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-localizacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: var(--secondary-color);
+    padding: 3rem;
+    font-size: 3rem;
+    text-align: center;
+    margin: 2rem;
+    font-family: Amoresa, serif;
+}
+
+.container p {
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 2rem 30rem;
+    font-family: "Eb Garamond", serif;
+}
+
+img {
+    width: 45rem;
+}
