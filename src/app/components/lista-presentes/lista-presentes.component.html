@@ -1,1 +1,16 @@
-<p>lista-presentes works!</p>
+<div class="container">
+    <h1 class="title">Lista de Presentes</h1>
+    <div class="grid">
+      <!-- Exemplo de Item -->
+      <div class="item" *ngFor="let presente of listaPresentes">
+        <img src="{{ presente.imagem }}" alt="{{ presente.nome }}">
+        <h2>{{ presente.nome }}</h2>
+        <p>Preço: {{ presente.preco | currency:'BRL' }}</p>
+        <p>Categoria: {{ presente.categoria }}</p>
+        <button [class.disabled]="!presente.disponivel">Adicionar ao Carrinho</button>
+      </div>
+      <!-- Fim do Exemplo de Item -->
+    </div>
+  
+    <button (click)="calcularValorTotal()">Clique em Mim</button>
+    <h2>{{valorTotal | currency:'BRL'}}</h2>
