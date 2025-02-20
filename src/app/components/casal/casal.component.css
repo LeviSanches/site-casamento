@@ -1,0 +1,46 @@
+.container {
+    background-color: var(--secondary-color);
+    width: 100%;
+}
+
+h1 {
+    color: var(--primary-color);
+    padding: 3rem;
+    font-size: 3rem;
+    text-align: center;
+    margin: 2rem;
+    font-family: Amoresa, serif;
+}
+
+.container-elementos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 2rem;
+}
+
+.container-texto {
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0 5rem  ;
+    padding: 2rem 4rem;
+    color: var(--primary-color);
+    font-family: "Eb Garamond", serif;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.container-imagem{
+    width: 50%;
+    filter: blur();
+}
+
+.container-imagem img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 4px solid var(--primary-color);
+    margin-bottom: 5rem;
+}

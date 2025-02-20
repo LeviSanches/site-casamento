@@ -1,0 +1,660 @@
+{
+    "presentes": [
+        {
+            "id": 1,
+            "nome": "Painel/rack",
+            "preco": 1200.00,
+            "imagem": "assets/presente.jpg",
+            "disponivel": true,
+            "categoria": "SALA"
+        },
+        {
+            "id": 2,
+            "nome": "TV",
+            "preco": 2500.00,
+            "imagem": "assets/presente.jpg",
+            "disponivel": true,
+            "categoria": "SALA"
+        },
+        {
+            "id": 3,
+            "nome": "Sofá 2 lugares retrátil",
+            "preco": 1800.00,
+            "imagem": "assets/presente.jpg",
+            "disponivel": true,
+            "categoria": "SALA"
+        },
+        {
+            "id": 4,
+            "nome": "2 poltronas",
+            "preco": 900.00,
+            "imagem": "assets/presente.jpg",
+            "disponivel": true,
+            "categoria": "SALA"
+        },
+        {
+            "id": 5,
+            "nome": "Abajur",
+            "preco": 150.00,
+            "imagem": "assets/presente.jpg",
+            "disponivel": true,
+            "categoria": "SALA"
+        },
+        {
+            "id": 6,
+            "nome": "Mesa de jantar 4 cadeiras",
+            "preco": 1300.00,
+           "imagem": "assets/presente.jpg",
+            "disponivel": true,
+            "categoria": "SALA"
+        },
+        {
+            "id": 7,
+            "nome": "Jogo de toalhas",
+            "preco": 200.00,
+         "imagem": "assets/presente.jpg",
+            "disponivel": true,
+            "categoria": "BANHEIRO"
+        },
+        {
+            "id": 8,
+            "nome": "Jogo de toalhas",
+            "preco": 200.00,
+            "imagem": "assets/presente.jpg",
+            "disponivel": true,
+            "categoria": "BANHEIRO"
+        },
+        {
+            "id": 9,
+            "nome": "Jogo de toalhas",
+            "preco": 200.00,
+            "imagem": "assets/presente.jpg",
+            "disponivel": true,
+            "categoria": "BANHEIRO"
+        },
+        {
+            "id": 10,
+            "nome": "Toalha de rosto",
+            "preco": 50.00,
+            "imagem": "assets/presente.jpg",
+            "disponivel": true,
+            "categoria": "BANHEIRO"
+        },
+        {
+            "id": 11,
+            "nome": "Toalha de rosto",
+            "preco": 50.00,
+            "imagem": "assets/presente.jpg",
+            "disponivel": true,
+            "categoria": "BANHEIRO"
+        },
+        {
+            "id": 12,
+            "nome": "Cesto de lixo",
+            "preco": 80.00,
+            "imagem": "assets/presente.jpg",
+            "disponivel": true,
+            "categoria": "BANHEIRO"
+        },
+        {
+            "id": 13,
+            "nome": "Cesto de roupa suja",
+            "preco": 150.00,
+            "imagem": "assets/presente.jpg",
+            "disponivel": true,
+            "categoria": "BANHEIRO"
+        },
+        {
+            "id": 14,
+            "nome": "Espelho orgânico",
+            "preco": 400.00,
+            "imagem": "assets/presente.jpg",
+            "disponivel": true,
+            "categoria": "BANHEIRO"
+        },
+        {
+            "id": 15,
+            "nome": "Kit roupões",
+            "preco": 300.00,
+            "imagem": "assets/presente.jpg",
+            "disponivel": true,
+            "categoria": "BANHEIRO"
+        },
+        {
+            "id": 16,
+            "nome": "Acessórios de pia",
+            "preco": 180.00,
+            "imagem": "assets/presente.jpg",
+            "disponivel": true,
+            "categoria": "BANHEIRO"
+        },
+        {
+            "id": 17,
+            "nome": "Geladeira",
+            "preco": 3500.00,
+            "imagem": "assets/presente.jpg",
+            "disponivel": true,
+            "categoria": "COZINHA"
+        },
+        {
+            "id": 18,
+            "nome": "Fogão 4 bocas",
+            "preco": 1200.00,
+            "imagem": "assets/presente.jpg",
+            "disponivel": true,
+            "categoria": "COZINHA"
+        },
+        {
+            "id": 19,
+            "nome": "Micro-ondas",
+            "preco": 700.00,
+            "imagem": "assets/presente.jpg",
+            "disponivel": true,
+            "categoria": "COZINHA"
+        },
+        {
+            "id": 20,
+            "nome": "Liquidificador",
+            "preco": 250.00,
+            "imagem": "assets/presente.jpg",
+            "disponivel": true,
+            "categoria": "COZINHA"
+        },
+        {
+            "id": 21,
+            "nome": "Processador de alimentos",
+            "preco": 450.00,
+            "imagem": "assets/presente.jpg",
+            "disponivel": true,
+            "categoria": "COZINHA"
+        },
+        {
+            "id": 22,
+            "nome": "Sanduicheira",
+            "preco": 180.00,
+            "imagem": "assets/presente.jpg",
+            "disponivel": true,
+            "categoria": "COZINHA"
+        },
+        {
+            "id": 23,
+            "nome": "Grill",
+            "preco": 320.00,
+            "imagem": "assets/presente.jpg",
+            "disponivel": true,
+            "categoria": "COZINHA"
+        },
+        {
+            "id": 24,
+            "nome": "Batedeira",
+            "preco": 300.00,
+            "imagem": "assets/presente.jpg",
+            "disponivel": true,
+            "categoria": "COZINHA"
+        },
+        {
+            "id": 25,
+            "nome": "AirFry",
+            "preco": 600.00,
+            "imagem": "assets/presente.jpg",
+            "disponivel": true,
+            "categoria": "COZINHA"
+        },
+        {
+            "id": 26,
+            "nome": "Cafeteira",
+            "preco": 400.00,
+            "imagem": "assets/presente.jpg",
+            "disponivel": true,
+            "categoria": "COZINHA"
+        },
+        {
+            "id": 27,
+            "nome": "Cafeteira expresso",
+            "preco": 900.00,
+            "imagem": "assets/presente.jpg",
+            "disponivel": true,
+            "categoria": "COZINHA"
+        },
+        {
+            "id": 28,
+            "nome": "Mixer",
+            "preco": 250.00,
+            "imagem": "assets/presente.jpg",
+            "disponivel": true,
+            "categoria": "COZINHA"
+        },
+        {
+            "id": 29,
+            "nome": "Pipoqueira",
+            "preco": 180.00,
+            "imagem": "assets/presente.jpg",
+            "disponivel": true,
+            "categoria": "COZINHA"
+        },
+        {
+            "id": 30,
+            "nome": "Purificador de água",
+            "preco": 1000.00,
+            "imagem": "assets/presente.jpg",
+            "disponivel": true,
+            "categoria": "COZINHA"
+        },
+        {
+            "id": 31,
+            "nome": "Máquina de lavar-louças",
+            "preco": 2500.00,
+            "imagem": "assets/presente.jpg",
+            "disponivel": true,
+            "categoria": "COZINHA"
+        },
+        {
+            "id": 32,
+            "nome": "Jogo de panelas cerâmica",
+            "preco": 800.00,
+            "imagem": "assets/presente.jpg",
+            "disponivel": true,
+            "categoria": "COZINHA"
+        },
+        {
+            "id": 33,
+            "nome": "Jogo de panelas antiaderentes",
+            "preco": 700.00,
+            "imagem": "assets/presente.jpg",
+            "disponivel": true,
+            "categoria": "COZINHA"
+        },
+        {
+            "id": 34,
+            "nome": "Panela de pressão",
+            "preco": 250.00,
+            "imagem": "assets/presente.jpg",
+            "disponivel": true,
+            "categoria": "COZINHA"
+        },
+        {
+            "id": 35,
+            "nome": "Aparelho de jantar",
+            "preco": 500.00,
+            "imagem": "ASSETS/PRESENTE.JPG",
+            "disponivel": true,
+            "categoria": "COZINHA"
+        },
+        {
+            "id": 36,
+            "nome": "Conjunto de pratos fundos 6",
+            "preco": 200.00,
+            "imagem": "ASSETS/PRESENTE.JPG",
+            "disponivel": true,
+            "categoria": "COZINHA"
+        },
+        {
+            "id": 37,
+            "nome": "Conjunto de pratos rasos 6",
+            "preco": 200.00,
+            "imagem": "ASSETS/PRESENTE.JPG",
+            "disponivel": true,
+            "categoria": "COZINHA"
+        },
+        {
+            "id": 38,
+            "nome": "Conjunto de xícaras e pires 6",
+            "preco": 250.00,
+            "imagem": "ASSETS/PRESENTE.JPG",
+            "disponivel": true,
+            "categoria": "COZINHA"
+        },
+        {
+            "id": 39,
+            "nome": "Conjunto de copos 6",
+            "preco": 150.00,
+            "imagem": "ASSETS/PRESENTE.JPG",
+            "disponivel": true,
+            "categoria": "COZINHA"
+        },
+        {
+            "id": 40,
+            "nome": "Conjunto de taças 6",
+            "preco": 250.00,
+            "imagem": "ASSETS/PRESENTE.JPG",
+            "disponivel": true,
+            "categoria": "COZINHA"
+        },
+        {
+            "id": 41,
+            "nome": "Faqueiro 36 peças",
+            "preco": 350.00,
+            "imagem": "ASSETS/PRESENTE.JPG",
+            "disponivel": true,
+            "categoria": "COZINHA"
+        },
+        {
+            "id": 42,
+            "nome": "Kit Marinex",
+            "preco": 300.00,
+            "imagem": "ASSETS/PRESENTE.JPG",
+            "disponivel": true,
+            "categoria": "COZINHA"
+        },
+        {
+            "id": 43,
+            "nome": "Kit potes herméticos (mantimentos)",
+            "preco": 180.00,
+            "imagem": "ASSETS/PRESENTE.JPG",
+            "disponivel": true,
+            "categoria": "COZINHA"
+        },
+        {
+            "id": 44,
+            "nome": "Kit potes herméticos (menores)",
+            "preco": 120.00,
+            "imagem": "ASSETS/PRESENTE.JPG",
+            "disponivel": true,
+            "categoria": "COZINHA"
+        },
+        {
+            "id": 45,
+            "nome": "Kit de potes de vidro",
+            "preco": 200.00,
+            "imagem": "ASSETS/PRESENTE.JPG",
+            "disponivel": true,
+            "categoria": "COZINHA"
+        },
+        {
+            "id": 46,
+            "nome": "Escorredor inox",
+            "preco": 180.00,
+            "imagem": "ASSETS/PRESENTE.JPG",
+            "disponivel": true,
+            "categoria": "COZINHA"
+        },
+        {
+            "id": 47,
+            "nome": "Kit de facas",
+            "preco": 250.00,
+            "imagem": "ASSETS/PRESENTE.JPG",
+            "disponivel": true,
+            "categoria": "COZINHA"
+        },
+        {
+            "id": 48,
+            "nome": "Kit de sobremesa",
+            "preco": 220.00,
+            "imagem": "ASSETS/PRESENTE.JPG",
+            "disponivel": true,
+            "categoria": "COZINHA"
+        },
+        {
+            "id": 49,
+            "nome": "Jarra de vidro",
+            "preco": 100.00,
+            "imagem": "ASSETS/PRESENTE.JPG",
+            "disponivel": true,
+            "categoria": "COZINHA"
+        },
+        {
+            "id": 50,
+            "nome": "Garrafa térmica",
+            "preco": 150.00,
+            "imagem": "ASSETS/PRESENTE.JPG",
+            "disponivel": true,
+            "categoria": "COZINHA"
+        },
+        {
+            "id": 51,
+            "nome": "Fruteira",
+            "preco": 120.00,
+            "imagem": "ASSETS/PRESENTE.JPG",
+            "disponivel": true,
+            "categoria": "COZINHA"
+        },
+        {
+            "id": 52,
+            "nome": "Porta temperos",
+            "preco": 180.00,
+            "imagem": "ASSETS/PRESENTE.JPG",
+            "disponivel": true,
+            "categoria": "COZINHA"
+        },
+        {
+            "id": 53,
+            "nome": "Máquina de lavar",
+            "preco": 2500.00,
+            "imagem": "path/to/image53.jpg",
+            "disponivel": true,
+            "categoria": "ÁREA DE SERVIÇO"
+        },
+        {
+            "id": 54,
+            "nome": "Varal sanfonado",
+            "preco": 250.00,
+            "imagem": "path/to/image54.jpg",
+            "disponivel": true,
+            "categoria": "ÁREA DE SERVIÇO"
+        },
+        {
+            "id": 55,
+            "nome": "Varal de chão",
+            "preco": 200.00,
+            "imagem": "path/to/image55.jpg",
+            "disponivel": true,
+            "categoria": "ÁREA DE SERVIÇO"
+        },
+        {
+            "id": 56,
+            "nome": "Escada de alumínio",
+            "preco": 300.00,
+            "imagem": "path/to/image56.jpg",
+            "disponivel": true,
+            "categoria": "ÁREA DE SERVIÇO"
+        },
+        {
+            "id": 57,
+            "nome": "Mop",
+            "preco": 150.00,
+            "imagem": "path/to/image57.jpg",
+            "disponivel": true,
+            "categoria": "ÁREA DE SERVIÇO"
+        },
+        {
+            "id": 58,
+            "nome": "Aspirador de pó",
+            "preco": 800.00,
+            "imagem": "path/to/image58.jpg",
+            "disponivel": true,
+            "categoria": "ÁREA DE SERVIÇO"
+        },
+        {
+            "id": 59,
+            "nome": "Cestos organizadores",
+            "preco": 200.00,
+            "imagem": "path/to/image59.jpg",
+            "disponivel": true,
+            "categoria": "ÁREA DE SERVIÇO"
+        },
+        {
+            "id": 60,
+            "nome": "Cesto de lixo grande",
+            "preco": 180.00,
+            "imagem": "path/to/image60.jpg",
+            "disponivel": true,
+            "categoria": "ÁREA DE SERVIÇO"
+        },
+        {
+            "id": 61,
+            "nome": "Tábua de passar",
+            "preco": 250.00,
+            "imagem": "path/to/image61.jpg",
+            "disponivel": true,
+            "categoria": "ÁREA DE SERVIÇO"
+        },
+        {
+            "id": 62,
+            "nome": "Ferro de passar",
+            "preco": 300.00,
+            "imagem": "path/to/image62.jpg",
+            "disponivel": true,
+            "categoria": "ÁREA DE SERVIÇO"
+        },
+        {
+            "id": 63,
+            "nome": "Caixa de ferramentas",
+            "preco": 400.00,
+            "imagem": "path/to/image63.jpg",
+            "disponivel": true,
+            "categoria": "ÁREA DE SERVIÇO"
+        },
+        {
+            "id": 64,
+            "nome": "Porta sabão em pó/amaciante/etc",
+            "preco": 150.00,
+            "imagem": "path/to/image64.jpg",
+            "disponivel": true,
+            "categoria": "ÁREA DE SERVIÇO"
+        },
+        {
+            "id": 65,
+            "nome": "Armário multiuso",
+            "preco": 700.00,
+            "imagem": "path/to/image65.jpg",
+            "disponivel": true,
+            "categoria": "ÁREA DE SERVIÇO"
+        },
+        {
+            "id": 66,
+            "nome": "Prateleiras",
+            "preco": 250.00,
+            "imagem": "path/to/image66.jpg",
+            "disponivel": true,
+            "categoria": "ÁREA DE SERVIÇO"
+        },
+        {
+            "id": 67,
+            "nome": "Jogo de cama",
+            "preco": 300.00,
+            "imagem": "path/to/image67.jpg",
+            "disponivel": true,
+            "categoria": "QUARTOS"
+        },
+        {
+            "id": 68,
+            "nome": "Jogo de cama",
+            "preco": 300.00,
+            "imagem": "path/to/image68.jpg",
+            "disponivel": true,
+            "categoria": "QUARTOS"
+        },
+        {
+            "id": 69,
+            "nome": "Jogo de cama",
+            "preco": 300.00,
+            "imagem": "path/to/image69.jpg",
+            "disponivel": true,
+            "categoria": "QUARTOS"
+        },
+        {
+            "id": 70,
+            "nome": "Edredom",
+            "preco": 400.00,
+            "imagem": "path/to/image70.jpg",
+            "disponivel": true,
+            "categoria": "QUARTOS"
+        },
+        {
+            "id": 71,
+            "nome": "Travesseiros",
+            "preco": 200.00,
+            "imagem": "path/to/image71.jpg",
+            "disponivel": true,
+            "categoria": "QUARTOS"
+        },
+        {
+            "id": 72,
+            "nome": "Cobre-leito",
+            "preco": 500.00,
+            "imagem": "path/to/image72.jpg",
+            "disponivel": true,
+            "categoria": "QUARTOS"
+        },
+        {
+            "id": 73,
+            "nome": "Mesa de cabeceira",
+            "preco": 450.00,
+            "imagem": "path/to/image73.jpg",
+            "disponivel": true,
+            "categoria": "QUARTOS"
+        },
+        {
+            "id": 74,
+            "nome": "Espelho corpo inteiro",
+            "preco": 600.00,
+            "imagem": "path/to/image74.jpg",
+            "disponivel": true,
+            "categoria": "QUARTOS"
+        },
+        {
+            "id": 75,
+            "nome": "Ventilador",
+            "preco": 350.00,
+            "imagem": "path/to/image75.jpg",
+            "disponivel": true,
+            "categoria": "QUARTOS"
+        },
+        {
+            "id": 76,
+            "nome": "Climatizador",
+            "preco": 1200.00,
+            "imagem": "path/to/image76.jpg",
+            "disponivel": true,
+            "categoria": "QUARTOS"
+        },
+        {
+            "id": 77,
+            "nome": "Abajur",
+            "preco": 180.00,
+            "imagem": "path/to/image77.jpg",
+            "disponivel": true,
+            "categoria": "QUARTOS"
+        },
+        {
+            "id": 78,
+            "nome": "Jogo de malas",
+            "preco": 1200.00,
+            "imagem": "path/to/image78.jpg",
+            "disponivel": true,
+            "categoria": "LUA DE MEL"
+        },
+        {
+            "id": 79,
+            "nome": "Jantar à luz de velas",
+            "preco": 500.00,
+            "imagem": "path/to/image79.jpg",
+            "disponivel": true,
+            "categoria": "LUA DE MEL"
+        },
+        {
+            "id": 80,
+            "nome": "Passeio de alguma coisa",
+            "preco": 800.00,
+            "imagem": "path/to/image80.jpg",
+            "disponivel": true,
+            "categoria": "LUA DE MEL"
+        },
+        {
+            "id": 81,
+            "nome": "Táxi até o hotel",
+            "preco": 100.00,
+            "imagem": "path/to/image81.jpg",
+            "disponivel": true,
+            "categoria": "LUA DE MEL"
+        },
+        {
+            "id": 82,
+            "nome": "2 hospedagens no hotel X",
+            "preco": 2500.00,
+            "imagem": "path/to/image82.jpg",
+            "disponivel": true,
+            "categoria": "LUA DE MEL"
+        }
+    ]
+}    
