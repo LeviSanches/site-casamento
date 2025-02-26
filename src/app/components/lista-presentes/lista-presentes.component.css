@@ -73,4 +73,25 @@
     background-color: #d6d6d6;
     cursor: not-allowed;
   }
-  
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+  }
+
+  .paginacao ::ng-deep .ngx-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .paginacao ::ng-deep .ngx-pagination .current {
+    background: var(--secondary-color);
+    border-radius: 50%;
+  }
+
+  .paginacao ::ng-deep .ngx-pagination a:hover{
+    border-radius: 50%;
+  }

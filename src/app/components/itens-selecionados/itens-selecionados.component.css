@@ -1,0 +1,91 @@
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+.cart-title {
+    font-size: 44px;
+    color: var(--text-color);
+    padding: 8px 0;
+}
+
+li {
+    display: flex;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 10px 0;
+    height: 100px;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.4rem;
+    font-family: "Eb Garamond", serif;
+    color: var(--text-color);
+}
+
+img {
+    width: 100px;
+    height: 100px;
+    display: block;
+}
+
+.remove-button {
+    background-color: var(--text-color);
+    border: none;
+    color: white;
+    padding: 20px;
+    height: 100%;
+    transition: .2s all;
+    cursor: pointer;
+}
+
+.remove-button:hover {
+    filter: brightness(0.9);
+}
+
+.cart-total {
+    font-size: 24px;
+    color: var(--gray);
+    font-weight: 700;
+    padding: 8px 0;
+    color: var(--text-color);
+    font-family: "Eb Garamond", serif;
+}
+
+input {
+    width: 30px;
+    text-align: center;
+}
+
+#button-adicionar {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+.button {
+    background-color: var(--text-color);   
+    border: none; 
+    color: white;
+    padding: 1rem;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    transition: .3s all;
+    font-family: "Eb Garamond", serif;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.button:hover {
+    filter: brightness(0.9);
+}
+
+.botton-line {
+    display: flex;
+    justify-content: space-between;
+  
+}
