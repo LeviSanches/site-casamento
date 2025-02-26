@@ -77,12 +77,21 @@
   .pagination {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 40px;
   }
 
-  .ngx-pagination .pagination-previous a:before, .ngx-pagination .pagination-previous.disabled::before {
-    content: "\ab";
-    display: none !important;
-    margin-right: .5rem;
-}
-  
+  .paginacao ::ng-deep .ngx-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .paginacao ::ng-deep .ngx-pagination .current {
+    background: var(--secondary-color);
+    border-radius: 50%;
+  }
+
+  .paginacao ::ng-deep .ngx-pagination a:hover{
+    border-radius: 50%;
+  }

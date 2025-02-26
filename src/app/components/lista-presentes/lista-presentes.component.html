@@ -6,13 +6,11 @@
       <h2>{{ presente.nome }}</h2>
       <p>Preço: {{ presente.preco | currency:'BRL' }}</p>
       <p>Categoria: {{ presente.categoria }}</p>
-      <button [class.disabled]="!presente.disponivel">Adicionar ao Carrinho</button>
+      <button (click)="comprar(presente)" [class.disabled]="!presente.disponivel">Adicionar ao Carrinho</button>
     </div>
   </div>
   <div class="pagination">
-    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    <pagination-controls class="paginacao" (pageChange)="p = $event"></pagination-controls>
   </div>
 </div>
-  
-  <button (click)="calcularValorTotal()">Clique em Mim</button>
-  <h2>{{valorTotal | currency:'BRL'}}</h2>
+  <router-outlet></router-outlet>
