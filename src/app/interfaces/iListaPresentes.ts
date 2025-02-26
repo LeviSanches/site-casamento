@@ -6,4 +6,5 @@ export interface IListaPresentes {
     imagem: string;
     disponivel: boolean;
     categoria: string;
+    quantidade: number;
 }

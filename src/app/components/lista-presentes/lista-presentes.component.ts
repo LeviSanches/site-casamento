@@ -21,6 +21,7 @@ export class ListaPresentesComponent {
   listaPresentes: IListaPresentes[] = [];
   valorTotal: number = 0
   p: number = 1;
+  mostrarLista: boolean = true;
 
   constructor(private router: Router) { }
   
@@ -34,7 +35,8 @@ export class ListaPresentesComponent {
   comprar(presente: IListaPresentes): void {
     this.itemService.adicionarAoCarrinho(presente);
     alert('Produto adicionado ao carrinho');
-    this.router.navigate(['itens-selecionados']);
+    this.mostrarLista = false;
+    this.router.navigate(['itens-selecionados']);    
   }
   
 

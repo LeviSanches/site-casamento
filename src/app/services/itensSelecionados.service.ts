@@ -6,7 +6,6 @@ import { IListaPresentes } from '../interfaces/iListaPresentes';
 })
 export class ItensSelecionadosService {
 
-  constructor() { }
   itens: IListaPresentes[] = [];
 
 
@@ -15,17 +14,17 @@ export class ItensSelecionadosService {
     return this.itens;
   }
 
-  adicionarAoCarrinho(presente: IListaPresentes) {
+  adicionarAoCarrinho(presente: IListaPresentes): void {
     this.itens.push(presente);
     localStorage.setItem("presente", JSON.stringify(this.itens));
   }
 
-  removerProdutoCarrinho(presenteId: number) {
+  removerProdutoCarrinho(presenteId: number): void {
     this.itens = this.itens.filter(item => item.id !== presenteId);
     localStorage.setItem("presente", JSON.stringify(this.itens));
   }
 
-  limparCarrinho() {    
+  limparCarrinho(): IListaPresentes[] {    
     localStorage.clear();
     return this.itens = [];
   }

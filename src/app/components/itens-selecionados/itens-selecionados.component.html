@@ -1,14 +1,17 @@
-<div class="container">
+<div class="container" *ngIf="mostrarCarrinho">
     <h2 class="cart-title">Carrinho</h2>
     <ul>
         <li *ngFor="let presente of presenteSelecionado">
             <img [src]="presente.imagem" alt="">
             <p>{{ presente.nome }}</p>
             <p>Preço: {{ presente.preco | currency: "BRL" }}</p>
-            <button class="remove-button" (click)="removerProdutoCarrinho(presente.id)"><i class="fa-solid fa-x"></i></button>
+            <button class="remove-button" (click)="removerProdutoCarrinho(presente.id)"><i class="fa-solid fa-trash-can" style="font-size: 2rem;"></i></button>
         </li>
     </ul>
     <h2 class="cart-total">Total: {{ total | currency: "BRL"}}</h2>
-    <button class="buy-button" (click)="comprar()">Comprar</button>
-<ng-template #carrinhoVazio>Nenhum produto foi adicionado ao carrinho</ng-template>
+    <div class="botton-line">
+        <button class="button" id="button-adicionar" (click)="adicionarMaisPresentes()">Adicionar presentes</button>
+        <button class="button" (click)="comprar()">Comprar</button>
+    </div>
 </div>
+<router-outlet></router-outlet>
