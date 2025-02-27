@@ -4,7 +4,7 @@
     max-width: 1200px;
     margin: 40px auto;
     padding: 20px;
-    background-color: #ffffff;
+    background-color: #ffffff69;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
@@ -13,7 +13,7 @@
     text-align: center;
     margin-bottom: 40px;
     font-size: 2rem;
-    color: #333333;
+    color: var(--text-color);
   }
   
   .grid {
@@ -28,7 +28,7 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 20px;
     transition: transform 0.2s;
-    background-color: #ffffff;
+    background-color: #a1785a23;
   }
   
   .item:hover {
@@ -94,4 +94,19 @@
 
   .paginacao ::ng-deep .ngx-pagination a:hover{
     border-radius: 50%;
+  }
+
+  .custom-dialog-container {
+    overflow: hidden;
+  }
+  
+  .custom-dialog-container .mat-dialog-content {
+    max-height: 80vh; /* Limita a altura do conteúdo do modal */
+    overflow-y: auto; /* Adiciona rolagem vertical ao conteúdo do modal */
+  }
+  
+  .custom-dialog-container .mat-dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
   }

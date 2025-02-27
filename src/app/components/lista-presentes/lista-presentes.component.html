@@ -1,4 +1,4 @@
-<div class="container" *ngIf="mostrarLista">
+<div class="container">
   <h1 class="title">Lista de Presentes</h1>
   <div class="grid">
     <div class="item" *ngFor="let presente of listaPresentes | paginate: { itemsPerPage: 12, currentPage: p }">
@@ -13,4 +13,3 @@
     <pagination-controls class="paginacao" (pageChange)="p = $event"></pagination-controls>
   </div>
 </div>
-<router-outlet></router-outlet>
