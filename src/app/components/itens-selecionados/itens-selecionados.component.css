@@ -107,15 +107,52 @@
     background: #557c707c;
   }
   
-  #button-adicionar {
+  #button-voltar {
     background: var(--text-color);
   }
   
-  #button-adicionar:hover {
+  #button-voltar:hover {
     background: #a1785a80;
   }
 
   .mat-mdc-dialog-surface mdc-dialog__surface {
     overflow: hidden;
   }
+
+  .informacoes-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .payment-options {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .payment-button {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff00;
+    color: var(--text-color);
+    border: none;
+    width: 10rem;
+    padding: 10px 10px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: 1px solid var(--text-color);
+  }
+  
+  .payment-button:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  .payment-button:active {
+    background-color: #003f7f;
+  }
+  
   

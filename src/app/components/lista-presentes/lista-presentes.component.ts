@@ -8,11 +8,12 @@ import { ItensSelecionadosService } from '../../services/itensSelecionados.servi
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { ItensSelecionadosComponent } from '../itens-selecionados/itens-selecionados.component';
 import { NotificacaoService } from '../../services/notificacao.service';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 
 @Component({
   selector: 'app-lista-presentes',
-  imports: [CommonModule, NgxPaginationModule, RouterModule],
+  imports: [CommonModule, NgxPaginationModule, RouterModule, MatProgressSpinnerModule],
   templateUrl: './lista-presentes.component.html',
   styleUrl: './lista-presentes.component.css'
 })
@@ -27,6 +28,8 @@ export class ListaPresentesComponent {
   valorTotal: number = 0
   p: number = 1;
 
+  loading: boolean = false;
+
   openModal(): void {
     const dialogConfig = new MatDialogConfig();
 
@@ -34,7 +37,8 @@ export class ListaPresentesComponent {
     dialogConfig.height = 'auto';
     dialogConfig.maxHeight = '90vh'; // Máximo de 90% da altura da viewport
     dialogConfig.panelClass = 'custom-dialog-container';
-    
+
+    this.loading = false;
     this.dialog.open(ItensSelecionadosComponent, dialogConfig);
   }
 
@@ -46,8 +50,19 @@ export class ListaPresentesComponent {
 
   comprar(presente: IListaPresentes): void {
     this.itemService.adicionarAoCarrinho(presente);
-    this.notificacao.notificar('Produto adicionado ao carrinho');
-    this.openModal();
+    this.loading = true;
+    setTimeout(() => {
+      this.openModal();
+    }, 1000);
+
+  }
+
+  ordenarPorMenorPreco(): void {
+    this.listaPresentes.sort((a, b) => a.preco - b.preco);
+  }
+
+  ordenarPorMaiorPreco(): void {
+    this.listaPresentes.sort((a, b) => b.preco - a.preco);
   }
 
 }

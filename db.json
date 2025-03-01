@@ -314,7 +314,7 @@
             "nome": "Aparelho de jantar",
             "preco": 500,
             "quantidade": 1,
-            "imagem": "ASSETS/PRESENTE.JPG",
+            "imagem": "assets/presente.jpg",
             "disponivel": true,
             "categoria": "COZINHA"
         },
@@ -323,7 +323,7 @@
             "nome": "Conjunto de pratos fundos 6",
             "preco": 200,
             "quantidade": 1,
-            "imagem": "ASSETS/PRESENTE.JPG",
+            "imagem": "assets/presente.jpg",
             "disponivel": true,
             "categoria": "COZINHA"
         },
@@ -332,7 +332,7 @@
             "nome": "Conjunto de pratos rasos 6",
             "preco": 200,
             "quantidade": 1,
-            "imagem": "ASSETS/PRESENTE.JPG",
+            "imagem": "assets/presente.jpg",
             "disponivel": true,
             "categoria": "COZINHA"
         },
@@ -341,7 +341,7 @@
             "nome": "Conjunto de xícaras e pires 6",
             "preco": 250,
             "quantidade": 1,
-            "imagem": "ASSETS/PRESENTE.JPG",
+            "imagem": "assets/presente.jpg",
             "disponivel": true,
             "categoria": "COZINHA"
         },
@@ -350,7 +350,7 @@
             "nome": "Conjunto de copos 6",
             "preco": 150,
             "quantidade": 1,
-            "imagem": "ASSETS/PRESENTE.JPG",
+            "imagem": "assets/presente.jpg",
             "disponivel": true,
             "categoria": "COZINHA"
         },
@@ -360,7 +360,7 @@
             "nome": "Conjunto de taças 6",
             "preco": 250,
             "quantidade": 1,
-            "imagem": "ASSETS/PRESENTE.JPG",
+            "imagem": "assets/presente.jpg",
             "disponivel": true,
             "categoria": "COZINHA"
         },
@@ -369,7 +369,7 @@
             "nome": "Faqueiro 36 peças",
             "preco": 350,
             "quantidade": 1,
-            "imagem": "ASSETS/PRESENTE.JPG",
+            "imagem": "assets/presente.jpg",
             "disponivel": true,
             "categoria": "COZINHA"
         },
@@ -378,7 +378,7 @@
             "nome": "Kit Marinex",
             "preco": 300,
             "quantidade": 1,
-            "imagem": "ASSETS/PRESENTE.JPG",
+            "imagem": "assets/presente.jpg",
             "disponivel": true,
             "categoria": "COZINHA"
         },
@@ -387,7 +387,7 @@
             "nome": "Kit potes herméticos (mantimentos)",
             "preco": 180,
             "quantidade": 1,
-            "imagem": "ASSETS/PRESENTE.JPG",
+            "imagem": "assets/presente.jpg",
             "disponivel": true,
             "categoria": "COZINHA"
         },
@@ -396,7 +396,7 @@
             "nome": "Kit potes herméticos (menores)",
             "preco": 120,
             "quantidade": 1,
-            "imagem": "ASSETS/PRESENTE.JPG",
+            "imagem": "assets/presente.jpg",
             "disponivel": true,
             "categoria": "COZINHA"
         },
@@ -405,7 +405,7 @@
             "nome": "Kit de potes de vidro",
             "preco": 200,
             "quantidade": 1,
-            "imagem": "ASSETS/PRESENTE.JPG",
+            "imagem": "assets/presente.jpg",
             "disponivel": true,
             "categoria": "COZINHA"
         },
@@ -414,7 +414,7 @@
             "nome": "Escorredor inox",
             "preco": 180,
             "quantidade": 1,
-            "imagem": "ASSETS/PRESENTE.JPG",
+            "imagem": "assets/presente.jpg",
             "disponivel": true,
             "categoria": "COZINHA"
         },
@@ -423,7 +423,7 @@
             "nome": "Kit de facas",
             "preco": 250,
             "quantidade": 1,
-            "imagem": "ASSETS/PRESENTE.JPG",
+            "imagem": "assets/presente.jpg",
             "disponivel": true,
             "categoria": "COZINHA"
         },
@@ -432,7 +432,7 @@
             "nome": "Kit de sobremesa",
             "preco": 220,
             "quantidade": 1,
-            "imagem": "ASSETS/PRESENTE.JPG",
+            "imagem": "assets/presente.jpg",
             "disponivel": true,
             "categoria": "COZINHA"
         },
@@ -441,7 +441,7 @@
             "nome": "Jarra de vidro",
             "preco": 100,
             "quantidade": 1,
-            "imagem": "ASSETS/PRESENTE.JPG",
+            "imagem": "assets/presente.jpg",
             "disponivel": true,
             "categoria": "COZINHA"
         },
@@ -451,7 +451,7 @@
             "nome": "Garrafa térmica",
             "preco": 150,
             "quantidade": 1,
-            "imagem": "ASSETS/PRESENTE.JPG",
+            "imagem": "assets/presente.jpg",
             "disponivel": true,
             "categoria": "COZINHA"
         },
@@ -460,7 +460,7 @@
             "nome": "Fruteira",
             "preco": 120,
             "quantidade": 1,
-            "imagem": "ASSETS/PRESENTE.JPG",
+            "imagem": "assets/presente.jpg",
             "disponivel": true,
             "categoria": "COZINHA"
         },
@@ -469,7 +469,7 @@
             "nome": "Porta temperos",
             "preco": 180,
             "quantidade": 1,
-            "imagem": "ASSETS/PRESENTE.JPG",
+            "imagem": "assets/presente.jpg",
             "disponivel": true,
             "categoria": "COZINHA"
         },
@@ -478,7 +478,7 @@
             "nome": "Máquina de lavar",
             "preco": 2500,
             "quantidade": 1,
-            "imagem": "path/to/image53.jpg",
+           "imagem": "assets/presente.jpg",
             "disponivel": true,
             "categoria": "ÁREA DE SERVIÇO"
         },
@@ -487,7 +487,7 @@
             "nome": "Varal sanfonado",
             "preco": 250,
             "quantidade": 1,
-            "imagem": "path/to/image54.jpg",
+           "imagem": "assets/presente.jpg",
             "disponivel": true,
             "categoria": "ÁREA DE SERVIÇO"
         },
@@ -496,7 +496,7 @@
             "nome": "Varal de chão",
             "preco": 200,
             "quantidade": 1,
-            "imagem": "path/to/image55.jpg",
+           "imagem": "assets/presente.jpg",
             "disponivel": true,
             "categoria": "ÁREA DE SERVIÇO"
         },
@@ -505,7 +505,7 @@
             "nome": "Escada de alumínio",
             "preco": 300,
             "quantidade": 1,
-            "imagem": "path/to/image56.jpg",
+            "imagem": "assets/presente.jpg",
             "disponivel": true,
             "categoria": "ÁREA DE SERVIÇO"
         },
@@ -514,7 +514,7 @@
             "nome": "Mop",
             "preco": 150,
             "quantidade": 1,
-            "imagem": "path/to/image57.jpg",
+           "imagem": "assets/presente.jpg",
             "disponivel": true,
             "categoria": "ÁREA DE SERVIÇO"
         },
@@ -523,7 +523,7 @@
             "nome": "Aspirador de pó",
             "preco": 800,
             "quantidade": 1,
-            "imagem": "path/to/image58.jpg",
+           "imagem": "assets/presente.jpg",
             "disponivel": true,
             "categoria": "ÁREA DE SERVIÇO"
         },
@@ -532,7 +532,7 @@
             "nome": "Cestos organizadores",
             "preco": 200,
             "quantidade": 1,
-            "imagem": "path/to/image59.jpg",
+           "imagem": "assets/presente.jpg",
             "disponivel": true,
             "categoria": "ÁREA DE SERVIÇO"
         },
@@ -542,7 +542,7 @@
             "nome": "Cesto de lixo grande",
             "preco": 180,
             "quantidade": 1,
-            "imagem": "path/to/image60.jpg",
+           "imagem": "assets/presente.jpg",
             "disponivel": true,
             "categoria": "ÁREA DE SERVIÇO"
         },
@@ -551,7 +551,7 @@
             "nome": "Tábua de passar",
             "preco": 250,
             "quantidade": 1,
-            "imagem": "path/to/image61.jpg",
+           "imagem": "assets/presente.jpg",
             "disponivel": true,
             "categoria": "ÁREA DE SERVIÇO"
         },
@@ -560,7 +560,7 @@
             "nome": "Ferro de passar",
             "preco": 300,
             "quantidade": 1,
-            "imagem": "path/to/image62.jpg",
+           "imagem": "assets/presente.jpg",
             "disponivel": true,
             "categoria": "ÁREA DE SERVIÇO"
         },
@@ -569,7 +569,7 @@
             "nome": "Caixa de ferramentas",
             "preco": 400,
             "quantidade": 1,
-            "imagem": "path/to/image63.jpg",
+           "imagem": "assets/presente.jpg",
             "disponivel": true,
             "categoria": "ÁREA DE SERVIÇO"
         },
@@ -578,7 +578,7 @@
             "nome": "Porta sabão em pó/amaciante/etc",
             "preco": 150,
             "quantidade": 1,
-            "imagem": "path/to/image64.jpg",
+           "imagem": "assets/presente.jpg",
             "disponivel": true,
             "categoria": "ÁREA DE SERVIÇO"
         },
@@ -587,7 +587,7 @@
             "nome": "Armário multiuso",
             "preco": 700,
             "quantidade": 1,
-            "imagem": "path/to/image65.jpg",
+           "imagem": "assets/presente.jpg",
             "disponivel": true,
             "categoria": "ÁREA DE SERVIÇO"
         },
@@ -596,7 +596,7 @@
             "nome": "Prateleiras",
             "preco": 250,
             "quantidade": 1,
-            "imagem": "path/to/image66.jpg",
+           "imagem": "assets/presente.jpg",
             "disponivel": true,
             "categoria": "ÁREA DE SERVIÇO"
         },
@@ -605,7 +605,7 @@
             "nome": "Jogo de cama",
             "preco": 300,
             "quantidade": 1,
-            "imagem": "path/to/image67.jpg",
+           "imagem": "assets/presente.jpg",
             "disponivel": true,
             "categoria": "QUARTOS"
         },
@@ -614,7 +614,7 @@
             "nome": "Jogo de cama",
             "preco": 300,
             "quantidade": 1,
-            "imagem": "path/to/image68.jpg",
+           "imagem": "assets/presente.jpg",
             "disponivel": true,
             "categoria": "QUARTOS"
         },
@@ -623,7 +623,7 @@
             "nome": "Jogo de cama",
             "preco": 300,
             "quantidade": 1,
-            "imagem": "path/to/image69.jpg",
+           "imagem": "assets/presente.jpg",
             "disponivel": true,
             "categoria": "QUARTOS"
         },
@@ -633,7 +633,7 @@
             "nome": "Edredom",
             "preco": 400,
             "quantidade": 1,
-            "imagem": "path/to/image70.jpg",
+           "imagem": "assets/presente.jpg",
             "disponivel": true,
             "categoria": "QUARTOS"
         },
@@ -642,7 +642,7 @@
             "nome": "Travesseiros",
             "preco": 200,
             "quantidade": 1,
-            "imagem": "path/to/image71.jpg",
+           "imagem": "assets/presente.jpg",
             "disponivel": true,
             "categoria": "QUARTOS"
         },
@@ -651,7 +651,7 @@
             "nome": "Cobre-leito",
             "preco": 500,
             "quantidade": 1,
-            "imagem": "path/to/image72.jpg",
+           "imagem": "assets/presente.jpg",
             "disponivel": true,
             "categoria": "QUARTOS"
         },
@@ -660,7 +660,7 @@
             "nome": "Mesa de cabeceira",
             "preco": 450,
             "quantidade": 1,
-            "imagem": "path/to/image73.jpg",
+           "imagem": "assets/presente.jpg",
             "disponivel": true,
             "categoria": "QUARTOS"
         },
@@ -669,7 +669,7 @@
             "nome": "Espelho corpo inteiro",
             "preco": 600,
             "quantidade": 1,
-            "imagem": "path/to/image74.jpg",
+           "imagem": "assets/presente.jpg",
             "disponivel": true,
             "categoria": "QUARTOS"
         },
@@ -678,7 +678,7 @@
             "nome": "Ventilador",
             "preco": 350,
             "quantidade": 1,
-            "imagem": "path/to/image75.jpg",
+           "imagem": "assets/presente.jpg",
             "disponivel": true,
             "categoria": "QUARTOS"
         },
@@ -687,7 +687,7 @@
             "nome": "Climatizador",
             "preco": 1200,
             "quantidade": 1,
-            "imagem": "path/to/image76.jpg",
+           "imagem": "assets/presente.jpg",
             "disponivel": true,
             "categoria": "QUARTOS"
         },
@@ -696,7 +696,7 @@
             "nome": "Abajur",
             "preco": 180,
             "quantidade": 1,
-            "imagem": "path/to/image77.jpg",
+           "imagem": "assets/presente.jpg",
             "disponivel": true,
             "categoria": "QUARTOS"
         },
@@ -705,7 +705,7 @@
             "nome": "Jogo de malas",
             "preco": 1200,
             "quantidade": 1,
-            "imagem": "path/to/image78.jpg",
+           "imagem": "assets/presente.jpg",
             "disponivel": true,
             "categoria": "LUA DE MEL"
         },
@@ -714,7 +714,7 @@
             "nome": "Jantar à luz de velas",
             "preco": 500,
             "quantidade": 1,
-            "imagem": "path/to/image79.jpg",
+           "imagem": "assets/presente.jpg",
             "disponivel": true,
             "categoria": "LUA DE MEL"
         },
@@ -724,7 +724,7 @@
             "nome": "Passeio de alguma coisa",
             "preco": 800,
             "quantidade": 1,
-            "imagem": "path/to/image80.jpg",
+           "imagem": "assets/presente.jpg",
             "disponivel": true,
             "categoria": "LUA DE MEL"
         },
@@ -733,7 +733,7 @@
             "nome": "Táxi até o hotel",
             "preco": 100,
             "quantidade": 1,
-            "imagem": "path/to/image81.jpg",
+           "imagem": "assets/presente.jpg",
             "disponivel": true,
             "categoria": "LUA DE MEL"
         },
@@ -742,7 +742,7 @@
             "nome": "2 hospedagens no hotel X",
             "preco": 2500,
             "quantidade": 1,
-            "imagem": "path/to/image82.jpg",
+           "imagem": "assets/presente.jpg",
             "disponivel": true,
             "categoria": "LUA DE MEL"
         }

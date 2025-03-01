@@ -1,4 +1,16 @@
 <header>
+    <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item>Inicio</button>
+        <button mat-menu-item>O Casal</button>
+        <button mat-menu-item>Cerimônia</button>
+        <button mat-menu-item>Lista de Presentes</button>
+        <button mat-menu-item>Confirme a Presença</button>
+        <button mat-menu-item>Dúvidas</button>
+    </mat-menu>
+    <!--button mat-mini-fab aria-label="Example icon button with a menu icon">
+            <mat-icon>menu</mat-icon>
+          </button-->
     <nav>
         <ul>
             <li>Inicio</li>
@@ -7,6 +19,13 @@
             <li>Lista de Presentes</li>
             <li>Confirme a Presença</li>
             <li>Dúvidas</li>
+            <li>
+                <a href="carrinho">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span *ngIf="ItensSelecionadosService.obtemCarrinho().length > 0" class="badge-carrinho">{{
+                        ItensSelecionadosService.obtemCarrinho().length }}</span>
+                </a>
+            </li>
         </ul>
     </nav>
 </header>
