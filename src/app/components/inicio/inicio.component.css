@@ -1,3 +1,5 @@
+
+
 .container {
     width: 100%;
 }
@@ -8,13 +10,13 @@
 }
 
 .imagem-container img {
-    width: 2000px;
+    width: 100vw;
 }
 
 .texto-nomes {
     position: absolute;
     top: 75%;
-    left: 20%;
+    left: 25%;
     transform: translate(-50%, -50%);
     color: #fff2e3;
     font-family: Amoresa, serif;
@@ -51,4 +53,56 @@
 
 .texto-container img {
     width: 45rem;
+}
+
+@media (max-width: 576px) {
+    .texto-nomes {
+        font-size: 10vw;
+        text-shadow: 2px 2px 0px #b3ada1;
+    }
+    .texto-data {
+        font-size: 3.3vw;
+        text-shadow: 2px 1px 0px #b3ada1;
+    }
+}
+
+@media (min-width: 576px) {
+    .texto-nomes {
+        font-size: 10vw;
+        text-shadow: 3px 3px 0px #b3ada1;
+    }
+    .texto-data {
+        font-size: 3.3vw;
+        text-shadow: 2px 1px 0px #b3ada1;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .texto-nomes {
+        font-size: 10vw;
+        text-shadow: 4px 4px 0px #b3ada1;
+    }
+    .texto-data {
+        font-size: 3.3vw;
+        text-shadow: 3px 2px 0px #b3ada1;
+    }
+}
+
+
+@media (min-width: 992px) {
+    .texto-nomes {
+        font-size: 10vw;
+        text-shadow: 5px 5px 0px #b3ada1;
+    }
+
+    .texto-data {
+        font-size: 3.3vw;
+        text-shadow: 4px 3px 0px #b3ada1;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    
 }

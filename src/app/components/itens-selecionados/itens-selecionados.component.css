@@ -1,91 +1,158 @@
 .container {
     width: 90%;
-    max-width: 1200px;
-    margin: 40px auto;
+    max-width: 800px;
+    margin: 0 auto;
     padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: "Eb Garamond", serif;
+    color: #333;
+    overflow: auto;
   }
   
-.cart-title {
-    font-size: 44px;
+  .close-button {
+    text-align: right;
+  }
+  
+  .close-button i {
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .cart-title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
     color: var(--text-color);
-    padding: 8px 0;
-}
-
-li {
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
     display: flex;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    border-radius: 8px;
-    overflow: hidden;
-    margin: 10px 0;
-    height: 100px;
     align-items: center;
     justify-content: space-between;
-    font-size: 1.4rem;
-    font-family: "Eb Garamond", serif;
+    padding: 10px 0;
+    border-bottom: 1px solid #dee2e6;
     color: var(--text-color);
-}
-
-img {
-    width: 100px;
-    height: 100px;
-    display: block;
-}
-
-.remove-button {
-    background-color: var(--text-color);
+    font-size: 1.2rem;
+  }
+  
+  li img {
+    width: 4rem;
+    height: 4rem;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .descricao {
+    flex: 2;
+    margin-left: 15px;
+  }
+  
+  .preco {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .remove-button {
+    background: none;
     border: none;
-    color: white;
-    padding: 20px;
-    height: 100%;
-    transition: .2s all;
-    cursor: pointer;
-}
-
-.remove-button:hover {
-    filter: brightness(0.9);
-}
-
-.cart-total {
-    font-size: 24px;
-    color: var(--gray);
-    font-weight: 700;
-    padding: 8px 0;
     color: var(--text-color);
-    font-family: "Eb Garamond", serif;
-}
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .remove-button i {
+    font-size: 1.5rem;
+  }
 
-input {
-    width: 30px;
+  .remove-button:hover {
+    color: #a70202;
+  }
+  
+  .empty-cart {
     text-align: center;
-}
-
-#button-adicionar {
-    background-color: var(--primary-color);
-    color: var(--text-color);
-}
-
-.button {
-    background-color: var(--text-color);   
-    border: none; 
-    color: white;
-    padding: 1rem;
-    font-size: 1rem;
-    margin-bottom: 10px;
-    transition: .3s all;
-    font-family: "Eb Garamond", serif;
-    cursor: pointer;
-    text-transform: uppercase;
-}
-
-.button:hover {
-    filter: brightness(0.9);
-}
-
-.botton-line {
+    margin-top: 20px;
+    color: #6c757d;
+  }
+  
+  .cart-total {
+    text-align: right;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: var(--secondary-color);
+  }
+  
+  .botton-line {
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
+  }
   
-}
+  .button {
+    background: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .button:hover {
+    background: #557c707c;
+  }
+  
+  #button-voltar {
+    background: var(--text-color);
+  }
+  
+  #button-voltar:hover {
+    background: #a1785a80;
+  }
+
+  .mat-mdc-dialog-surface mdc-dialog__surface {
+    overflow: hidden;
+  }
+
+  .informacoes-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .payment-options {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .payment-button {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff00;
+    color: var(--text-color);
+    border: none;
+    width: 10rem;
+    padding: 10px 10px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: 1px solid var(--text-color);
+  }
+  
+  .payment-button:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  .payment-button:active {
+    background-color: #003f7f;
+  }
+  
+  

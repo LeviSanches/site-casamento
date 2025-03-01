@@ -1,17 +1,72 @@
-<div class="container" *ngIf="mostrarCarrinho">
-    <h2 class="cart-title">Carrinho</h2>
-    <ul>
-        <li *ngFor="let presente of presenteSelecionado">
-            <img [src]="presente.imagem" alt="">
-            <p>{{ presente.nome }}</p>
-            <p>Preço: {{ presente.preco | currency: "BRL" }}</p>
-            <button class="remove-button" (click)="removerProdutoCarrinho(presente.id)"><i class="fa-solid fa-trash-can" style="font-size: 2rem;"></i></button>
-        </li>
-    </ul>
-    <h2 class="cart-total">Total: {{ total | currency: "BRL"}}</h2>
-    <div class="botton-line">
-        <button class="button" id="button-adicionar" (click)="adicionarMaisPresentes()">Adicionar presentes</button>
-        <button class="button" (click)="comprar()">Comprar</button>
+<div class="container">
+    <div class="close-button">
+        <i (click)="close()" class="fa-solid fa-xmark"></i>
     </div>
+    <mat-stepper #stepper>
+        <mat-step>
+            <ng-template matStepLabel>Carrinho</ng-template>
+            <ul>
+                <li *ngFor="let presente of presenteSelecionado">
+                    <img [src]="presente.imagem" alt="">
+                    <p class="descricao">{{ presente.nome }}</p>
+                    <p class="preco">{{ presente.preco | currency: 'BRL' }}</p>
+                    <button class="remove-button" (click)="removerProdutoCarrinho(presente.id)">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                </li>
+            </ul>
+            <div class="empty-cart" *ngIf="presenteSelecionado.length == 0">
+                <h1>Carrinho vazio!!</h1>
+            </div>
+            <h2 class="cart-total">Total: {{ total | currency: 'BRL' }}</h2>
+            <div class="botton-line">
+                <button class="button" id="button-voltar" (click)="close()">Adicionar presentes</button>
+                <button class="button" matStepperNext [disabled]="presenteSelecionado.length == 0">Próximo</button>
+            </div>
+
+        </mat-step>
+
+        <mat-step [stepControl]="informacoes" errorMessage="Address is required.">
+            <form class="informacoes-form" [formGroup]="informacoes">
+                <ng-template matStepLabel>Informações</ng-template>
+                <mat-form-field>
+                    <mat-label>Nome</mat-label>
+                    <input matInput placeholder="Digite seu nome completo" formControlName="nome" required>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Email</mat-label>
+                    <input matInput placeholder="Digite seu email" formControlName="email">
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Telefone</mat-label>
+                    <input matInput placeholder="ddd + número" mask="(00)00000-0000" formControlName="telefone"
+                        required>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Mensagem</mat-label>
+                    <textarea matInput placeholder="Nos deixe uma mensagem..." formControlName="mensagem"></textarea>
+                </mat-form-field>
+                <div class="botton-line">
+                    <button class="button" id="button-voltar" matStepperPrevious>Voltar</button>
+                    <button class="button" matStepperNext>Próximo</button>
+                </div>
+            </form>
+        </mat-step>
+
+        <mat-step>
+            <form [formGroup]="formaPagamento">
+                <ng-template matStepLabel>Pagamento</ng-template>
+                <ng-template matStepLabel>Escolha a forma de pagamento</ng-template>
+                <div class="payment-options">
+                    <button class="payment-button">Pix <i class="fa-brands fa-pix"></i></button>
+                    <button class="payment-button">Cartão de
+                        Crédito <i class="fa-solid fa-credit-card"></i></button>
+                    <button class="payment-button">Boleto
+                        Bancário <i class="fa-solid fa-barcode"></i></button>
+                </div>
+            </form>
+        </mat-step>
+    </mat-stepper>
+
 </div>
 <router-outlet></router-outlet>
