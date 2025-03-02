@@ -16,7 +16,7 @@
                 </li>
             </ul>
             <div class="empty-cart" *ngIf="presenteSelecionado.length == 0">
-                <h1>Carrinho vazio!!</h1>
+                <span>Carrinho vazio...<i class="fa-solid fa-face-frown"></i></span>
             </div>
             <h2 class="cart-total">Total: {{ total | currency: 'BRL' }}</h2>
             <div class="botton-line">

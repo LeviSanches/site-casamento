@@ -64,6 +64,14 @@
         font-size: 3.3vw;
         text-shadow: 2px 1px 0px #b3ada1;
     }
+
+    .texto-container {
+        margin-top: 2rem;
+        padding: 1rem 2rem;
+    }
+    .texto-container p{
+        font-size: 1rem;
+    }
 }
 
 @media (min-width: 576px) {
@@ -74,6 +82,14 @@
     .texto-data {
         font-size: 3.3vw;
         text-shadow: 2px 1px 0px #b3ada1;
+    }
+
+    .texto-container {
+        margin-top: 3rem;
+        padding: 2rem 4rem;
+    }
+    .texto-container p{
+        font-size: 1.1rem;
     }
 }
 
@@ -86,6 +102,14 @@
     .texto-data {
         font-size: 3.3vw;
         text-shadow: 3px 2px 0px #b3ada1;
+    }
+
+    .texto-container {
+        margin-top: 4rem;
+        padding: 3rem 6rem;
+    }
+    .texto-container p{
+        font-size: 1.3rem;
     }
 }
 
@@ -100,9 +124,16 @@
         font-size: 3.3vw;
         text-shadow: 4px 3px 0px #b3ada1;
     }
+
+    .texto-container {
+        margin-top: 5rem;
+        padding: 4rem 10rem;
+    }
+    .texto-container p{
+        font-size: 1.5rem;
+    }
 }
 
-
 @media (min-width: 1200px) {
-    
+
 }

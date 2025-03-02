@@ -1,8 +1,56 @@
-<app-header></app-header>
-<app-inicio></app-inicio>
-<app-casal></app-casal>
-<app-cerimonia></app-cerimonia>
-<app-lista-presentes></app-lista-presentes>
-<app-confirme-presenca></app-confirme-presenca>
-<app-duvidas></app-duvidas>
+<header>
+    <button mat-icon-button class="example-icon" [matMenuTriggerFor]="menu">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item><a href="#inicio">Inicio</a></button>
+        <button mat-menu-item><a href="#casal">O Casal</a></button>
+        <button mat-menu-item><a href="#local">Cerimônia</a></button>
+        <button mat-menu-item><a href="#presentes">Lista de Presentes</a></button>
+        <button mat-menu-item><a href="#confirmacao">Confirme a Presença</a></button>
+        <button mat-menu-item><a href="#duvidas">Dúvidas</a></button>
+        <button mat-menu-item (click)="abrirCarrinho()">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span *ngIf="ItensSelecionadosService.obtemCarrinho().length > 0" class="badge-carrinho">
+                {{ItensSelecionadosService.obtemCarrinho().length}}
+            </span>
+        </button>
+    </mat-menu>
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#casal">O Casal</a></li>
+            <li><a href="#local">Cerimônia</a></li>
+            <li><a href="#presentes">Lista de Presentes</a></li>
+            <li><a href="#confirmacao">Confirme a Presença</a></li>
+            <li><a href="#duvidas">Dúvidas</a></li>
+            <li (click)="abrirCarrinho()">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span *ngIf="ItensSelecionadosService.obtemCarrinho().length > 0" class="badge-carrinho">
+                    {{ItensSelecionadosService.obtemCarrinho().length}}
+                </span>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<section id="inicio">
+    <app-inicio></app-inicio>
+</section>
+<section id="casal">
+    <app-casal></app-casal>
+</section>
+<section id="local">
+    <app-cerimonia></app-cerimonia>
+</section>
+<section id="presentes">
+    <app-lista-presentes></app-lista-presentes>
+</section>
+<section id="confirmacao">
+    <app-confirme-presenca></app-confirme-presenca>
+</section>
+<section id="duvidas">
+    <app-duvidas></app-duvidas>
+</section>
 <app-footer></app-footer>
+<router-outlet></router-outlet>

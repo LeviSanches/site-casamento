@@ -78,7 +78,8 @@
   .empty-cart {
     text-align: center;
     margin-top: 20px;
-    color: #6c757d;
+    color: var(--text-color);
+    font-size: 2rem;
   }
   
   .cart-total {
