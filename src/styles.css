@@ -21,6 +21,7 @@
   html {
     line-height: 1.15; /* 1 */
     -webkit-text-size-adjust: 100%; /* 2 */
+    scroll-behavior: smooth !important;
   }
   
   body {
@@ -31,4 +32,12 @@ html {
     background-color: var(--primary-color);
 }
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; }
+
+h1 {
+  font-family: Amoresa, serif;
+}
+
+p {
+  font-family: EbGaramond, serif;
+}

@@ -1,150 +1,224 @@
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffff69;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
-  .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #ffffff69;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  .header p{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
-    color: var(--secondary-color);
-    font-family: EbGaramond, serif;
-    text-align: center;
-    padding: 0 5rem;
-  }
-  
+.header p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  font-family: EbGaramond, serif;
+  text-align: center;
+  padding: 0 5rem;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+  color: var(--secondary-color);
+  font-family: Amoresa, serif;
+}
+
+.ordenacao {
+  background-color: var(--primary-color);
+  border: 1px solid #e0e0e0;
+  margin: 0 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.ordenacao p {
+  font-size: 1.25rem;
+  padding: 0;
+}
+
+.ordenacao button {
+  margin: 0 2rem;
+  width: 20%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.item {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.2s;
+  background-color: #a1785a23;
+}
+
+.item:hover {
+  transform: scale(1.02);
+}
+
+.item img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+.item h2 {
+  font-size: 1.25rem;
+  color: #333333;
+  margin: 10px 0;
+}
+
+.item p {
+  color: #6c757d;
+  margin: 5px 0;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: var(--text-color);
+}
+
+button.disabled {
+  background-color: #d6d6d6;
+  cursor: not-allowed;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.paginacao ::ng-deep .ngx-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.paginacao ::ng-deep .ngx-pagination .current {
+  background: var(--secondary-color);
+  border-radius: 50%;
+}
+
+.paginacao ::ng-deep .ngx-pagination a:hover {
+  border-radius: 50%;
+}
+
+.custom-dialog-container {
+  overflow: hidden;
+}
+
+.custom-dialog-container .mat-dialog-content {
+  max-height: 80vh;
+  /* Limita a altura do conteúdo do modal */
+  overflow-y: auto;
+  /* Adiciona rolagem vertical ao conteúdo do modal */
+}
+
+.custom-dialog-container .mat-dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
+
+@media (max-width: 576px) {
   .title {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 2rem;
-    color: var(--secondary-color);
-    font-family: Amoresa, serif;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
   }
 
-  .ordenacao {
-    background-color: var(--primary-color);
-    border: 1px solid #e0e0e0;
-    margin: 0 3rem;
-    display: flex;    
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-
-  .ordenacao p {
-    font-size: 1.25rem;
-    padding: 0;
+  .header p {
+    font-size: 1rem;
+    padding: 0 1rem;
   }
 
   .ordenacao button {
-    margin: 0 2rem;
-    width: 20%;
+    margin: 0 1.5rem;
+    width: 30%;
+    font-size: 0.8rem;
   }
-  
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
+}
+
+@media ((min-width: 576px) and (max-width: 767px)) {
+  .title {
+    margin-bottom: 15px;
+    font-size: 2rem;
   }
-  
-  .item {
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    transition: transform 0.2s;
-    background-color: #a1785a23;
+  .header p {
+    font-size: 1.2rem;
+    padding: 0 1rem;
   }
-  
-  .item:hover {
-    transform: scale(1.02);
+}
+
+
+@media ((min-width: 768px) and (max-width: 991px)) {
+  .title {
+    margin-bottom: 20px;
+    font-size: 2rem;
   }
-  
-  .item img {
-    width: 100%;
-    max-height: 200px;
-    object-fit: cover;
-    border-radius: 8px 8px 0 0;
+  .header p {
+    font-size: 1.3rem;
+    padding: 0 2rem;
   }
-  
-  .item h2 {
-    font-size: 1.25rem;
-    color: #333333;
-    margin: 10px 0;
+}
+
+
+@media ((min-width: 992px) and (max-width: 1199px)) {
+  .title {
+    margin-bottom: 30px;
+    font-size: 2rem;
   }
-  
-  .item p {
-    color: #6c757d;
-    margin: 5px 0;
+  .header p {
+    font-size: 1.3rem;
+    padding: 0 3rem;
   }
-  
-   button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: var(--secondary-color);
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.2s;
-  }
-  
-   button:hover {
-    background-color: var(--text-color);
-  }
-  
-   button.disabled {
-    background-color: #d6d6d6;
-    cursor: not-allowed;
+}
+
+
+@media (min-width: 1200px) {
+  .title {
+    margin-bottom: 40px;
+    font-size: 2rem;
   }
 
-  .pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px;
+  .header p {
+    font-size: 1.4rem;
+    padding: 0 4rem;
   }
-
-  .paginacao ::ng-deep .ngx-pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .paginacao ::ng-deep .ngx-pagination .current {
-    background: var(--secondary-color);
-    border-radius: 50%;
-  }
-
-  .paginacao ::ng-deep .ngx-pagination a:hover{
-    border-radius: 50%;
-  }
-
-  .custom-dialog-container {
-    overflow: hidden;
-  }
-  
-  .custom-dialog-container .mat-dialog-content {
-    max-height: 80vh; /* Limita a altura do conteúdo do modal */
-    overflow-y: auto; /* Adiciona rolagem vertical ao conteúdo do modal */
-  }
-  
-  .custom-dialog-container .mat-dialog-actions {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 10px;
-  }
-
-  .loading {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-  }
+}
