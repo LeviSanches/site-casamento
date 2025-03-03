@@ -1,0 +1,98 @@
+
+
+.container {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: var(--secondary-color);
+    font-size: 3rem;
+}
+
+p {
+    font-size: 1.7rem;
+}
+
+.formulario {
+    margin-top: 20px;
+}
+
+.informacoes-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+.count {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+mat-radio-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+mat-radio-button {
+    color: var(--secondary-color);
+}
+
+.confirm-button {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    margin: 0 2rem;
+    display: block;
+    padding: 10px;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.confirm-button:hover {
+    background-color: var(--text-color);
+}
+
+.confirm-button.disabled {
+    background-color: #d6d6d6;
+    cursor: not-allowed;
+}
+
+.quantity-box {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+}
+
+@media ( max-width: 576px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
+
+@media ((min-width: 576px) and (max-width: 767px)) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+}
