@@ -1,5 +1,4 @@
 export interface IListaPresentes {
-
     id: number;
     nome: string;
     preco: number;

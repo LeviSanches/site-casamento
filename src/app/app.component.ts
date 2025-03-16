@@ -6,7 +6,6 @@ import { CerimoniaComponent } from "./components/cerimonia/cerimonia.component";
 import { ListaPresentesComponent } from "./components/lista-presentes/lista-presentes.component";
 import { ConfirmePresencaComponent } from "./components/confirme-presenca/confirme-presenca.component";
 import { DuvidasComponent } from "./components/duvidas/duvidas.component";
-import { FooterComponent } from "./shared/footer/footer.component";
 import { ItensSelecionadosService } from './services/itensSelecionados.service';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
@@ -24,7 +23,6 @@ import { ItensSelecionadosComponent } from './components/itens-selecionados/iten
     ListaPresentesComponent,
     ConfirmePresencaComponent,
     DuvidasComponent,
-    FooterComponent,
     CommonModule,
     MatButtonModule,
     MatMenuModule,

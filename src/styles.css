@@ -38,6 +38,6 @@ h1 {
   font-family: Amoresa, serif;
 }
 
-p {
-  font-family: EbGaramond, serif;
+p, h2 {
+  font-family: EbGaramond, sans-serif;
 }

@@ -11,6 +11,9 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { MatFormFieldModule } from '@angular/material/form-field';  
 import { MatInputModule } from '@angular/material/input';
 import { NgxMaskDirective } from 'ngx-mask';
+import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
+import { PagamentoService } from '../../services/pagamento.service';
+import { IPagamento } from '../../interfaces/iPagamento';
 
 @Component({
   selector: 'app-itens-selecionados',
@@ -26,13 +29,28 @@ import { NgxMaskDirective } from 'ngx-mask';
     NgxMaskDirective
   ],
   templateUrl: './itens-selecionados.component.html',
-  styleUrl: './itens-selecionados.component.css'
+  styleUrl: './itens-selecionados.component.css',
+  providers: [
+    {
+      provide: STEPPER_GLOBAL_OPTIONS,
+      useValue: {showError: true},
+    }
+  ]
 })
 export class ItensSelecionadosComponent {
 
+  private pagamentoService = inject(PagamentoService)
+  
   presenteSelecionado: IListaPresentes[] = [];
   mostrarCarrinho: boolean = true;
   total = 0;
+  informacoesPagamento: IPagamento = {
+    nomeConvidado: '',
+    email: '',
+    idProduto: 0,
+    descricao: '',
+    preco: 0
+  }
 
   constructor(
     public itensSelecionadosService: ItensSelecionadosService,
@@ -45,9 +63,9 @@ export class ItensSelecionadosComponent {
 
   informacoes = this.formBuilder.group({
     nome: ['', Validators.required],
-    email: [''],
+    email: ['', Validators.required],
     telefone: ['', Validators.required],
-    mensagem: [''],
+    mensagem: ['', Validators.required],
   });
 
   formaPagamento = this.formBuilder.group({
@@ -86,9 +104,15 @@ export class ItensSelecionadosComponent {
   }*/
 
   comprar() {
-    this.itensSelecionadosService.limparCarrinho();
-    this.notificacao.notificar('Compra realizada com sucesso');
-    //this.router.navigate(['produtos']);
+    if(this.presenteSelecionado.length === 0) {
+      this.notificacao.notificar('Verifique o carrinho de compras');
+      return;
+    }
+    if(this.informacoes.invalid) {
+      this.notificacao.notificar('Verifique as informações de contato');
+      return;
+    }
+    this.pagamentoService.pagar()
   }
 
 }

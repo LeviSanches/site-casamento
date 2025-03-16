@@ -1,10 +1,10 @@
 .container {
-    background-color: var(--secondary-color);
+    background: linear-gradient(to bottom, #f6f2e7, #557c70c0, #557c70e3, rgba(102, 128, 120, 0.747), #f6f2e7);
     width: 100%;
 }
 
 h1 {
-    color: var(--primary-color);
+    color: var(--text-color);
     padding: 3rem;
     font-size: 3rem;
     text-align: center;

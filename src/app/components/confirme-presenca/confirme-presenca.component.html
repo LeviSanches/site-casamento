@@ -1,43 +1,46 @@
-<div class="container">
-    <h1>Confirmação de presença</h1>
-    <p>Faça parte da nossa história de amor, confirme sua presença.</p>
-
-    <div class="formulario">
-        <form class="informacoes-form" [formGroup]="presenca">
-            <ng-template matStepLabel>Informações</ng-template>
-            <mat-form-field>
-                <mat-label>Nome</mat-label>
-                <input matInput placeholder="Digite seu nome completo" formControlName="nome" required>
-            </mat-form-field>
-            <mat-radio-group formControlName="statusPresenca">Você irá ao evento?
-                <mat-radio-button value="Sim">Sim</mat-radio-button>
-                <mat-radio-button value="Nao">Não</mat-radio-button>
-            </mat-radio-group>
-            <mat-form-field>
-                <mat-label>Telefone</mat-label>
-                <input matInput placeholder="ddd + número" mask="(00)00000-0000" formControlName="telefone" required>
-            </mat-form-field>
-            <mat-form-field>
-                <mat-label>Email</mat-label>
-                <input matInput placeholder="Digite seu email" formControlName="email">
-            </mat-form-field>
-            <div class="count" *ngIf="returnStatusPresenca() === 'Sim'">
-                <span>Quantos acompanhantes?</span>
-                <button mat-icon-button (click)="decrease()" [disabled]="count === 0">
-                    <mat-icon>remove_circle_outline</mat-icon>
-                </button>
-                <span>{{ count }}</span>
-                <button mat-icon-button (click)="increase()" [disabled]="count === 5">
-                    <mat-icon>add_circle_outline</mat-icon>
-                </button>
-            </div>            
-            <ng-container *ngIf="count > 0">
-                <mat-form-field *ngFor="let nome of numAcompanhantes">
-                  <mat-label>Nome</mat-label>
-                  <input matInput placeholder="Digite o nome" [formControlName]="nomeAcompanhante + nome" required>
+<div class="container">    
+    <div class="content">
+        <h1>Confirmação de presença</h1>
+        <p>Faça parte da nossa história de amor, confirme sua presença.</p>
+        <div class="formulario">
+            <form class="informacoes-form" [formGroup]="presenca">
+                <ng-template matStepLabel>Informações</ng-template>
+                <mat-form-field>
+                    <mat-label>Nome</mat-label>
+                    <input matInput placeholder="Digite seu nome completo" formControlName="nome" required>
                 </mat-form-field>
-              </ng-container>
-              <button class="confirm-button" (click)="confirm()" [class.disabled]="">Confirmar</button>
-        </form>
+                <mat-radio-group formControlName="statusPresenca">Você irá ao evento?
+                    <mat-radio-button label-text-color="red" value="Sim">Sim</mat-radio-button>
+                    <mat-radio-button value="Nao">Não</mat-radio-button>
+                </mat-radio-group>
+                <mat-form-field>
+                    <mat-label>Telefone</mat-label>
+                    <input matInput placeholder="ddd + número" mask="(00)00000-0000" formControlName="telefone" required>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Email</mat-label>
+                    <input matInput placeholder="Digite seu email" formControlName="email">
+                </mat-form-field>
+                <div class="count" *ngIf="returnStatusPresenca() === 'Sim'">
+                    <span>Quantos acompanhantes?</span>
+                    <button mat-icon-button (click)="decrease()" [disabled]="count === 0">
+                        <mat-icon>remove_circle_outline</mat-icon>
+                    </button>
+                    <span>{{ count }}</span>
+                    <button mat-icon-button (click)="increase()" [disabled]="count === 5">
+                        <mat-icon>add_circle_outline</mat-icon>
+                    </button>
+                </div>
+                <ng-container formArrayName="acompanhantes" *ngIf="count > 0">
+                    <div *ngFor="let acompanhante of numAcompanhantes let i = index">
+                        <mat-form-field [formGroupName]="i">
+                            <mat-label>Nome do Acompanhante {{ i + 1 }}</mat-label>
+                            <input matInput placeholder="Digite o nome" formControlName="nome" required>
+                        </mat-form-field>
+                    </div>
+                </ng-container>
+                <button class="confirm-button" (click)="confirm()">Confirmar</button>
+            </form>
+        </div>
     </div>
 </div>
