@@ -15,4 +15,12 @@ export class NotificacaoService {
       horizontalPosition: "center"
     });
   }
+
+  notificarLonga(mensagem: string): void {
+    this.snackBar.open(mensagem, 'Ok', {
+      duration: 15000,
+      verticalPosition: "top",
+      horizontalPosition: "center"
+    });
+  }
 }
