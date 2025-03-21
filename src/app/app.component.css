@@ -1,6 +1,4 @@
-
-  
-  header {
+header {
     width: 100vw;
     height: 10vh;
     position: fixed;
@@ -37,9 +35,9 @@ li i {
 
 .badge-carrinho {
     position: absolute;
-    top: -10px; 
+    top: -10px;
     right: -10px;
-    background-color: var(--secondary-color); 
+    background-color: var(--secondary-color);
     color: white;
     border-radius: 50%;
     padding: 5px 10px;
@@ -50,7 +48,63 @@ li {
     position: relative;
 }
 
-@media ( max-width: 576px) {
+/* CSS */
+footer {
+    background-color: var(--primary-color);
+    padding: 20px 0;
+    text-align: center;
+    color: #333;
+}
+
+.footer-container {
+    background: linear-gradient(to bottom, var(--primary-color), white);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-content {
+    margin: 20px 0;
+}
+
+.footer-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.footer-content p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.footer-links li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+footer hr {
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #ddd;
+}
+
+
+@media (max-width: 576px) {
     header {
         height: 3vh;
         background-color: rgba(255, 255, 255, 0);
@@ -92,7 +146,8 @@ li {
     }
 
     header button {
-        display: block
+        display: block;
+        color: var(--text-color)
     }
 }
 
@@ -105,7 +160,7 @@ li {
     header button {
         display: none;
     }
-    
+
     ul li {
         font-size: .9rem;
     }
@@ -116,6 +171,7 @@ li {
     header nav {
         display: block;
     }
+
     header button {
         display: none;
     }

@@ -26,7 +26,7 @@
 
         </mat-step>
 
-        <mat-step [stepControl]="informacoes" errorMessage="Address is required.">
+        <mat-step [stepControl]="informacoes" errorMessage="Preencha as informacoes obrigatórias">
             <form class="informacoes-form" [formGroup]="informacoes">
                 <ng-template matStepLabel>Informações</ng-template>
                 <mat-form-field>
@@ -58,10 +58,10 @@
                 <ng-template matStepLabel>Pagamento</ng-template>
                 <ng-template matStepLabel>Escolha a forma de pagamento</ng-template>
                 <div class="payment-options">
-                    <button class="payment-button">Pix <i class="fa-brands fa-pix"></i></button>
-                    <button class="payment-button">Cartão de
+                    <button class="payment-button" (click)="comprar()">Pix <i class="fa-brands fa-pix"></i></button>
+                    <button class="payment-button" (click)="comprar()">Cartão de
                         Crédito <i class="fa-solid fa-credit-card"></i></button>
-                    <button class="payment-button">Boleto
+                    <button class="payment-button" (click)="comprar()">Boleto
                         Bancário <i class="fa-solid fa-barcode"></i></button>
                 </div>
             </form>

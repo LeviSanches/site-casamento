@@ -1,0 +1,18 @@
+.container {
+    text-align: center;
+    padding: 1rem 1rem;
+}
+
+h1 {
+    font-size: 2rem;
+    color: var(--text-color)
+}
+
+h2 {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+}
+
+p {
+    color: var(--secondary-color);
+}

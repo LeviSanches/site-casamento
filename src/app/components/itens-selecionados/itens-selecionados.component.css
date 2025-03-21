@@ -142,7 +142,7 @@
     border: none;
     width: 10rem;
     padding: 10px 10px;
-    margin-bottom: 1rem;
+    margin: 1rem;
     cursor: pointer;
     transition: background-color 0.3s;
     border: 1px solid var(--text-color);

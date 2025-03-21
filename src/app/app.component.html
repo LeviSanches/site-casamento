@@ -9,11 +9,8 @@
         <button mat-menu-item><a href="#presentes">Lista de Presentes</a></button>
         <button mat-menu-item><a href="#confirmacao">Confirme a Presença</a></button>
         <button mat-menu-item><a href="#duvidas">Dúvidas</a></button>
-        <button mat-menu-item (click)="abrirCarrinho()">
-            <i class="fa-solid fa-cart-shopping"></i>
-            <span *ngIf="ItensSelecionadosService.obtemCarrinho().length > 0" class="badge-carrinho">
-                {{ItensSelecionadosService.obtemCarrinho().length}}
-            </span>
+        <button mat-menu-item (click)="abrirCarrinho()" *ngIf="ItensSelecionadosService.obtemCarrinho().length > 0">
+            <a>Carrinho</a>
         </button>
     </mat-menu>
     <nav>
@@ -24,9 +21,9 @@
             <li><a href="#presentes">Lista de Presentes</a></li>
             <li><a href="#confirmacao">Confirme a Presença</a></li>
             <li><a href="#duvidas">Dúvidas</a></li>
-            <li (click)="abrirCarrinho()">
+            <li (click)="abrirCarrinho()" *ngIf="ItensSelecionadosService.obtemCarrinho().length > 0">
                 <i class="fa-solid fa-cart-shopping"></i>
-                <span *ngIf="ItensSelecionadosService.obtemCarrinho().length > 0" class="badge-carrinho">
+                <span class="badge-carrinho">
                     {{ItensSelecionadosService.obtemCarrinho().length}}
                 </span>
             </li>
@@ -52,5 +49,27 @@
 <section id="duvidas">
     <app-duvidas></app-duvidas>
 </section>
-<app-footer></app-footer>
+<!-- HTML -->
+<footer>
+    <div class="footer-container">
+      <div class="footer-content">
+        <h1>Laís & Levi</h1>
+        <p>22.11.2025</p>
+        <p>
+          Estamos muito felizes em compartilhar este momento especial com vocês.
+          Aguardamos todos no nosso grande dia!
+        </p>
+        <ul class="footer-links">
+          <li><a href="#duvidas">Dúvidas</a></li>
+          <li><a href="#confirmacao">Confirmação de Presença</a></li>
+          <li><a href="#presentes">Lista de Presentes</a></li>
+        </ul>
+        <p>Com amor,</p>
+        <p>Laís & Levi</p>
+        <hr>
+        <p>Desenvolvido por Levi | UI Design por Laís</p>
+      </div>
+    </div>
+  </footer>
+  
 <router-outlet></router-outlet>
