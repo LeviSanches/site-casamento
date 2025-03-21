@@ -47,6 +47,7 @@ export class ItensSelecionadosComponent {
   informacoesPagamento: IPagamento = {
     nomeConvidado: '',
     email: '',
+    telefone: '',
     produto: []
   }
 
@@ -107,6 +108,7 @@ export class ItensSelecionadosComponent {
     this.informacoesPagamento = {
       nomeConvidado: this.informacoes.controls.nome.value!,
       email: this.informacoes.controls.email.value!,
+      telefone: this.informacoes.controls.telefone.value!,
       produto: this.presenteSelecionado.map(p => {
         return {
           id: p.id,
@@ -132,17 +134,7 @@ export class ItensSelecionadosComponent {
         console.error('Erro ao enviar dados:', error);
       }
     );
-    /*this.pagamentoService.pagar(this.informacoesPagamento).subscribe(
-      () => {
-        this.itensSelecionadosService.limparCarrinho();
-        //this.notificacao.notificar('Compra realizada com sucesso');
-        console.log('Dados enviados com sucesso')
-        this.close();
-      },
-      (error: any) => {
-        console.error('Erro ao enviar dados:', error);
-      }
-    )*/
+    
   }
 
 }

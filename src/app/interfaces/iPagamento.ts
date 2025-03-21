@@ -4,5 +4,7 @@ export interface IPagamento {
     idPagamento?: number,
     nomeConvidado: string,
     email: string,
-    produto: IListaPresentes[]
+    telefone: string,
+    status?: string,
+    produto?: IListaPresentes[]
 }
