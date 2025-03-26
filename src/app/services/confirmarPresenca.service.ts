@@ -13,7 +13,6 @@ export class ConfirmarPresencaService {
 
   private readonly url = environment.apiUrl;
 
-
   confirmarPresenca(data: IConvidado): Observable<IConvidado> {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',

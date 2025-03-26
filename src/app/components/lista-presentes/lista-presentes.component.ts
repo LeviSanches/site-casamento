@@ -43,8 +43,9 @@ export class ListaPresentesComponent {
   }
 
   ngOnInit() {
-    this.listaPresentesService.getProdutos().subscribe((data: IListaPresentes[]) => {
-      this.listaPresentes = data;
+    this.listaPresentesService.getProdutos().subscribe(
+      (produtoJson: IListaPresentes[]) => {
+      this.listaPresentes = produtoJson;
     });
   }
 
@@ -54,7 +55,6 @@ export class ListaPresentesComponent {
     setTimeout(() => {
       this.openModal();
     }, 1000);
-
   }
 
   ordenarPorMenorPreco(): void {

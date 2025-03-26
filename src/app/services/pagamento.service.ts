@@ -21,7 +21,7 @@ export class PagamentoService {
     return this.http.post<string>(`${this.apiUrl}/pagamento`, data, { headers });
   }
 
-  salvarPagamento(data: any): Observable<string> {
+  salvarPagamento(data: IPagamento): Observable<string> {
     const headers = new HttpHeaders({
           'Content-Type': 'application/json',
         });

@@ -13,11 +13,11 @@
   </div>
   <div class="grid">
     <div class="item" *ngFor="let presente of listaPresentes | paginate: { itemsPerPage: 12, currentPage: p }">
-      <img src="{{ presente.imagem }}" alt="{{ presente.nome }}">
+      <img src="{{ presente.imagem }}" alt="{{ presente.nome }}" [ngStyle]="!presente.disponivel ? {'filter': 'grayscale(100%)'} : {'background-color': 'red'}">
       <h2>{{ presente.nome }}</h2>
       <p>Preço: {{ presente.preco | currency:'BRL' }}</p>
-      <p>Categoria: {{ presente.categoria }}</p>
-      <button (click)="comprar(presente)" [class.disabled]="!presente.disponivel">Adicionar ao Carrinho</button>
+      <p>Categoria: {{ presente.categoria }}</p>      
+      <button (click)="comprar(presente)" [disabled]="!presente.disponivel" [class.disabled]="!presente.disponivel">Adicionar ao Carrinho</button>
     </div>
   </div>
   <div class="pagination">

@@ -32,8 +32,6 @@ import { ItensSelecionadosComponent } from './components/itens-selecionados/iten
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'lais&lais';
-
   ItensSelecionadosService: ItensSelecionadosService = inject(ItensSelecionadosService);
   itemService: ItensSelecionadosService = inject(ItensSelecionadosService);
   dialog: MatDialog = inject(MatDialog);
