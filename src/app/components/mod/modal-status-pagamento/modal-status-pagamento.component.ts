@@ -1,6 +1,9 @@
 import { Component, inject } from '@angular/core';
 import { NotificacaoService } from '../../../services/notificacao.service';
 import { PagamentoService } from '../../../services/pagamento.service';
+import { Constantes } from '../../../constants/Constantes';
+import { IPagamento } from '../../../interfaces/iPagamento';
+import { IListaPresentes } from '../../../interfaces/iListaPresentes';
 
 @Component({
   selector: 'app-modal-status-pagamento',
@@ -13,15 +16,15 @@ export class ModalStatusPagamentoComponent {
   private notificacao = inject(NotificacaoService);
   private pagamentoService = inject(PagamentoService);
 
-  status: string = '';
-  nome = '';
-  email: string = '';
-  telefone: string = '';
-  //payer.email
-  //payer.name
-  //payer.phone.area_code + payer.phone.number
-
-
+  dadosPagamento: IPagamento = {
+    nomeConvidado: '',
+    email: '',
+    telefone: '',
+    status: '',
+    mensagem: '',
+    produtos: []
+  };
+  
   ngOnInit() {
     const urlParams = new URLSearchParams(window.location.search);
     const status = urlParams.get('status');
@@ -30,27 +33,38 @@ export class ModalStatusPagamentoComponent {
 
     this.pagamentoService.buscarPagamento(preferencia).subscribe({
       next: (res: any) => {
-        this.nome = res.payer.name;
-        this.email = res.payer.email;
-        this.telefone = `${res.payer.phone.area_code}${res.payer.phone.number}`;
+        this.dadosPagamento.nomeConvidado = res.payer.name;
+        this.dadosPagamento.email = res.payer.email;
+        this.dadosPagamento.telefone = `${res.payer.phone.area_code}${res.payer.phone.number}`;
+        this.dadosPagamento.mensagem = res.additional_info
+        const produtos = res.items;
+        produtos.forEach((p: IListaPresentes) => this.dadosPagamento.produtos?.push(p));
         switch (status) {
           case 'approved':
-            this.status = 'Aprovado';
-            this.notificacao.notificarLonga(`Obrigado ${this.nome.trim()}, por nos presentear! Seu carinho e generosidade significa muito para nós.`);
+            this.dadosPagamento.status = 'aprovado';
+            this.notificacao.notificarLonga(this.dadosPagamento.nomeConvidado.trim() + Constantes.MSG_PAGAMENTO_APROVADO);
             break;
           case 'pending':
-            this.status = 'Pendente';
-            this.notificacao.notificarLonga(`Oi ${this.nome.trim()}, seu pagamento está pendente, aguarde um pouco, caso não seja aprovado, entre em contato com os noivos`);
+            this.dadosPagamento.status = 'pendente';
+            this.notificacao.notificarLonga(this.dadosPagamento.nomeConvidado.trim() + Constantes.MSG_PAGAMENTO_PENDENTE);
             break;
           case 'failure':
-            this.status = 'Falhou'
-            this.notificacao.notificarLonga(`Ops! ${this.nome.trim()}, seu pagamento falhou, tente novamente, caso o erro persista, entre em contato com os noivos`);
+            this.dadosPagamento.status = 'falhou'
+            this.notificacao.notificarLonga(this.dadosPagamento.nomeConvidado.trim() + Constantes.MSG_PAGAMENTO_FALHOU);
             break;
           default:
-            this.status = 'Desconhecido';
-            this.notificacao.notificarLonga(`Ops! ${this.nome.trim()}, algo deu errado, entre em contato com os noivos`);
+            this.dadosPagamento.status = 'desconhecido';
+            this.notificacao.notificarLonga(this.dadosPagamento.nomeConvidado.trim() + Constantes.MSG_PAGAMENTO_DESCONHECIDO);
             break;
         }
+        this.pagamentoService.salvarPagamento(this.dadosPagamento).subscribe({
+          next: (res) => {
+            console.log('dados de resposta: ', res);
+          },
+          error: (err) => {
+            console.log('erro ao salvar pagamento: ', err);
+          }
+        });
       },
       error: (err) => {
         console.log('erro', err);

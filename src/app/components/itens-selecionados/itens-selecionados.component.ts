@@ -48,7 +48,7 @@ export class ItensSelecionadosComponent {
     nomeConvidado: '',
     email: '',
     telefone: '',
-    produto: []
+    produtos: []
   }
 
   constructor(
@@ -64,7 +64,7 @@ export class ItensSelecionadosComponent {
     nome: ['', Validators.required],
     email: ['', Validators.required],
     telefone: ['', Validators.required],
-    mensagem: ['', Validators.required],
+    mensagem: [''],
   });
 
   formaPagamento = this.formBuilder.group({
@@ -109,7 +109,8 @@ export class ItensSelecionadosComponent {
       nomeConvidado: this.informacoes.controls.nome.value!,
       email: this.informacoes.controls.email.value!,
       telefone: this.informacoes.controls.telefone.value!,
-      produto: this.presenteSelecionado.map(p => {
+      mensagem: this.informacoes.controls.mensagem.value!,
+      produtos: this.presenteSelecionado.map(p => {
         return {
           id: p.id,
           nome: p.nome,
@@ -121,20 +122,20 @@ export class ItensSelecionadosComponent {
       })
     }
     console.log(this.informacoesPagamento)
-    this.pagamentoService.pagar(this.informacoesPagamento).subscribe(
-      (data: any) => {
+    this.pagamentoService.pagar(this.informacoesPagamento).subscribe({
+      next: (data: any) => {
         console.log('Resposta:', JSON.stringify(data));
+        this.itensSelecionadosService.limparCarrinho();
         if (data) {
-          window.open(data.url, '_blank');
+          window.open(data.url, '_self');
         } else {
           console.error('Erro: Resposta veio nula');
         }
       },
-      (error: any) => {
+      error: (error: any) => {
         console.error('Erro ao enviar dados:', error);
       }
-    );
-    
+    });
   }
 
 }

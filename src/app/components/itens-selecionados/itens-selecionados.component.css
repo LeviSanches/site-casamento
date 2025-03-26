@@ -10,6 +10,12 @@
     color: #333;
     overflow: auto;
   }
+
+p {
+    font-size: 1rem;
+    color: var(--text-color);
+    text-align: center;
+  }
   
   .close-button {
     text-align: right;

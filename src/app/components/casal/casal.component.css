@@ -1,5 +1,5 @@
 .container {
-    background: linear-gradient(to bottom, #f6f2e7, #557c70c0, #557c70e3, rgba(102, 128, 120, 0.747), #f6f2e7);
+    background-color: var(--primary-color);
     width: 100%;
 }
 
@@ -12,7 +12,7 @@ h1 {
     font-family: Amoresa, serif;
 }
 
-.container-elementos {
+.container-elementos-1, .container-elementos-2 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,7 +26,7 @@ h1 {
     align-items: center;
     margin: 2rem 0 5rem  ;
     padding: 2rem 4rem;
-    color: var(--primary-color);
+    color: var(--text-color);
     font-family: "Eb Garamond", serif;
     font-size: 1.8rem;
     text-align: center;
@@ -40,7 +40,6 @@ h1 {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    border: 4px solid var(--primary-color);
     margin-bottom: 2rem;
 }
 
@@ -54,9 +53,14 @@ h1 {
         width: 90%;
     }
 
-    .container-elementos {
+    .container-elementos-1 {
         display: flex;
         flex-direction: column;
+    }
+
+    .container-elementos-2 {
+        display: flex;
+        flex-direction: column-reverse;
     }
 
     .container-texto {
@@ -67,9 +71,14 @@ h1 {
 
 @media (min-width: 576px) {
     
-    .container-elementos {
+    .container-elementos-1 {
         display: flex;
         flex-direction: column;
+    }
+
+    .container-elementos-2 {
+        display: flex;
+        flex-direction: column-reverse;
     }
 
     .container-texto {
@@ -84,7 +93,12 @@ h1 {
 
 @media (min-width: 768px) {
 
-    .container-elementos {
+    .container-elementos-1 {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .container-elementos-2 {
         display: flex;
         flex-direction: row;
     }

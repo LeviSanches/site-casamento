@@ -48,7 +48,25 @@ li {
     position: relative;
 }
 
-/* CSS */
+.parallax-1 {
+    background-image: url('/assets/IMG_0036.jpg');
+    height: 50%; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+.parallax-2 {
+    background-image: url('/assets/IMG_0064.jpg');
+    height: 50%; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
 footer {
     background-color: var(--primary-color);
     padding: 20px 0;
@@ -133,6 +151,7 @@ footer hr {
     header button {
         display: block
     }
+
 }
 
 
@@ -165,6 +184,12 @@ footer hr {
         font-size: .9rem;
     }
 }
+
+@media only screen and (max-device-width: 1366px) {
+    .parallax-1, .parallax-2 {
+      background-attachment: scroll;
+    }
+  }
 
 
 @media (min-width: 1200px) {
