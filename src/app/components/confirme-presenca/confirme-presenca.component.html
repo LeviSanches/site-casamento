@@ -2,7 +2,7 @@
     <div class="content">
         <h1>Confirmação de presença</h1>
         <p>Faça parte da nossa história de amor, confirme sua presença.</p>
-        <div class="formulario">
+        <div class="formulario" *ngIf="mostrarFormulario">
             <form class="informacoes-form" [formGroup]="presenca">
                 <ng-template matStepLabel>Informações</ng-template>
                 <mat-form-field>
@@ -10,7 +10,7 @@
                     <input matInput placeholder="Digite seu nome completo" formControlName="nome" required>
                 </mat-form-field>
                 <mat-radio-group formControlName="statusPresenca">Você irá ao evento?
-                    <mat-radio-button label-text-color="red" value="Sim">Sim</mat-radio-button>
+                    <mat-radio-button value="Sim">Sim</mat-radio-button>
                     <mat-radio-button value="Nao">Não</mat-radio-button>
                 </mat-radio-group>
                 <mat-form-field>
@@ -21,14 +21,14 @@
                     <mat-label>Email</mat-label>
                     <input matInput placeholder="Digite seu email" formControlName="email">
                 </mat-form-field>
-                <div class="count" *ngIf="returnStatusPresenca() === 'Sim'">
+                <div class="count" *ngIf="verificaStatusPresenca()">
                     <span>Quantos acompanhantes?</span>
                     <button mat-icon-button (click)="decrease()" [disabled]="count === 0">
                         <mat-icon>remove_circle_outline</mat-icon>
                     </button>
                     <span>{{ count }}</span>
                     <button mat-icon-button (click)="increase()" [disabled]="count === 5">
-                        <mat-icon>add_circle_outline</mat-icon>
+                        <mat-icon color="#ffffff">add_circle_outline</mat-icon>
                     </button>
                 </div>
                 <ng-container formArrayName="acompanhantes" *ngIf="count > 0">
@@ -39,8 +39,17 @@
                         </mat-form-field>
                     </div>
                 </ng-container>
-                <button class="confirm-button" (click)="confirm()">Confirmar</button>
+                <button class="confirm-button" 
+                    (click)="confirm()" 
+                    [disabled]="presenca.controls.nome.invalid||
+                    presenca.controls.email.invalid ||
+                    presenca.controls.telefone.invalid ||
+                    presenca.controls.statusPresenca.invalid
+                    ">Confirmar</button>
             </form>
+        </div>
+        <div>
+            <p *ngIf="!mostrarFormulario">{{ mensagemPosConfirmacao() }}</p>
         </div>
     </div>
 </div>
