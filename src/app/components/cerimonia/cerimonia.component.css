@@ -9,6 +9,10 @@
     width: 100%;
 }
 
+.texto-container p {
+    padding: 0 12%;
+}
+
 .localizacao-container {
     display: flex;
     flex-direction: column;
@@ -35,6 +39,7 @@ p {
     color: var(--secondary-color);
     text-align: center;
     font-family: "Eb Garamond", serif;
+    margin: 0 4rem;
 }
 
 img {

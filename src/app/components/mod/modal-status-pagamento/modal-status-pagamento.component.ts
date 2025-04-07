@@ -37,8 +37,18 @@ export class ModalStatusPagamentoComponent {
         this.dadosPagamento.email = res.payer.email;
         this.dadosPagamento.telefone = `${res.payer.phone.area_code}${res.payer.phone.number}`;
         this.dadosPagamento.mensagem = res.additional_info
-        const produtos = res.items;
-        produtos.forEach((p: IListaPresentes) => this.dadosPagamento.produtos?.push(p));
+        const produtos: any = res.items;
+        for(let i = 0; i < produtos.length; i++) {
+          this.dadosPagamento.produtos?.push({
+            id: produtos[i].id,
+            nome: produtos[i].title,
+            preco: produtos[i].unit_price,
+            imagem: produtos[i].picture_url,
+            disponivel: produtos[i].available_quantity,
+            categoria: produtos[i].category_id,
+            quantidade: produtos[i].quantity
+           });
+        }
         switch (status) {
           case 'approved':
             this.dadosPagamento.status = 'aprovado';

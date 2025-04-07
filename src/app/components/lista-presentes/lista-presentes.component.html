@@ -1,10 +1,10 @@
 <div class="container">
   <div class="header">
     <h1 class="title">Lista de Presentes Virtual</h1>
-    <p>Sua presença já será o nosso presente! Mas caso queiram nos presentear, aqui poderão encontrar nossa lista de
-      presentes: contribuições para a nossa viagem dos sonhos! Obrigado pelos mimos, lembraremos com carinho de cada um
-      ao
-      desfrutar da nossa lua de mel!</p>
+    <p>Sua presença será o nosso maior presente! Porém, se quiserem nos agraciar de outra forma, criamos uma lista
+      especial de presentes simbólicos: contribuições para a realização da nossa viagem dos sonhos e para as primeiras
+      despesas da nossa nova vida juntos. Saibam que lembraremos com muito carinho de cada um de vocês enquanto
+      aproveitamos nossa lua de mel e construímos nossa vida a dois!</p>
     <div class="ordenacao">
       <p>Ordenar por:</p>
       <button (click)="ordenarPorMaiorPreco()">Maior preço</button>
@@ -13,11 +13,13 @@
   </div>
   <div class="grid">
     <div class="item" *ngFor="let presente of listaPresentes | paginate: { itemsPerPage: 12, currentPage: p }">
-      <img src="{{ presente.imagem }}" alt="{{ presente.nome }}" [ngStyle]="!presente.disponivel ? {'filter': 'grayscale(100%)'} : {'background-color': 'red'}">
-      <h2>{{ presente.nome }}</h2>
+      <img src="{{ presente.imagem }}" alt="{{ presente.nome }}"
+        [ngStyle]="!presente.disponivel ? {'filter': 'grayscale(100%)'} : {}">
+      <h2 [ngStyle]="!presente.disponivel ? {'color': 'gray'} : {}">{{ presente.nome }}</h2>
       <p>Preço: {{ presente.preco | currency:'BRL' }}</p>
-      <p>Categoria: {{ presente.categoria }}</p>      
-      <button (click)="comprar(presente)" [disabled]="!presente.disponivel" [class.disabled]="!presente.disponivel">Adicionar ao Carrinho</button>
+      <p>Categoria: {{ presente.categoria }}</p>
+      <button (click)="comprar(presente)" [disabled]="!presente.disponivel"
+        [class.disabled]="!presente.disponivel">Adicionar ao Carrinho</button>
     </div>
   </div>
   <div class="pagination">
