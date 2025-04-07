@@ -10,6 +10,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { NotificacaoService } from '../../services/notificacao.service';
 import { IConvidado } from '../../interfaces/iConvidado';
 import { ConfirmarPresencaService } from '../../services/confirmarPresenca.service';
+import { Constantes } from '../../constants/Constantes';
 
 @Component({
   selector: 'app-confirme-presenca',
@@ -58,8 +59,13 @@ export class ConfirmePresencaComponent {
     ])
   });
 
-  returnStatusPresenca(): string {
-    return this.presenca.controls.statusPresenca.value!;
+  mostrarFormulario: boolean = true;
+
+  mensagemPosConfirmacao(): string {
+    let nomes = this.convidado.nome?.split(" ");
+    return this.convidado.statusPresenca ?
+      `${nomes?.[0]}, ${Constantes.MSG_COMPARECIMENTO_SIM}` :
+      `${nomes?.[0]}, ${Constantes.MSG_COMPARECIMENTO_NAO}`;
   }
 
   decrease() {
@@ -90,18 +96,17 @@ export class ConfirmePresencaComponent {
       statusPresenca: this.verificaStatusPresenca(),
       acompanhantes: acompanhantes
     }
-    this.apiService.confirmarPresenca(this.convidado).subscribe(
-      () => {
-        console.log('Dados enviados com sucesso')
-        this.notificacao.notificarLonga("Confirmação de presença registrada com sucesso!");
-        this.presenca.reset();
+    this.apiService.confirmarPresenca(this.convidado).subscribe({
+      next: () => {
+        this.notificacao.notificar("Confirmação de presença registrada com sucesso!");        
+        this.mostrarFormulario = false
       },
-      error => {
+      error: (error) => {
         console.error('Erro ao enviar dados:', error);
         this.notificacao.notificarLonga("Houve um erro ao confirmar a presença, tente novamente, se o problema persistir entre em contato com os noivos")
-        this.presenca.reset();
-      }
-    );
+      },
+      complete: () => this.presenca.reset()
+    });
 
   }
 }

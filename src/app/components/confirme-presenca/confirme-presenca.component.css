@@ -75,7 +75,7 @@ mat-radio-group {
     display: block;
     padding: 10px;
     background-color: var(--secondary-color);
-    color: white;
+    color: #ffffff;
     border: none;
     cursor: pointer;
     transition: background-color 0.2s;
