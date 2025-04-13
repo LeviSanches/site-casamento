@@ -66,6 +66,11 @@ mat-radio-group {
     color: var(--primary-color);
 }
 
+#texto_confirmacao {
+    background-color: #00000036;
+    border-radius: 10px;
+    padding: 4px;
+}
 
 
 .confirm-button {
