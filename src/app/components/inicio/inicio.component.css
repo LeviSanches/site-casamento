@@ -42,13 +42,13 @@
     align-items: center;
     margin-top: 6rem;
     padding: 5rem 12rem;
-    font-family: "Eb Garamond", serif;
 }
 
 .texto-container p{
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: var(--secondary-color);
     text-align: center;
+    font-family: "Eb Garamond", serif;
 }
 
 .texto-container img {
@@ -142,7 +142,7 @@
         padding: 4rem 10rem;
     }
     .texto-container p{
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
 
     .texto-container img {
