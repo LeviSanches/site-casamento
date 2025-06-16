@@ -3,12 +3,12 @@
         <mat-icon>menu</mat-icon>
     </button>
     <mat-menu #menu="matMenu">
-        <button mat-menu-item><a href="#inicio">Inicio</a></button>
-        <button mat-menu-item><a href="#casal">O Casal</a></button>
-        <button mat-menu-item><a href="#local">Cerimônia</a></button>
-        <button mat-menu-item><a href="#presentes">Lista de Presentes</a></button>
-        <button mat-menu-item><a href="#confirmacao">Confirme a Presença</a></button>
-        <button mat-menu-item><a href="#duvidas">Dúvidas</a></button>
+        <a href="#inicio"><button mat-menu-item>Inicio</button></a>
+        <a href="#casal"><button mat-menu-item>O Casal</button></a>
+        <a href="#local"><button mat-menu-item>Cerimônia</button></a>
+        <a href="#presentes"><button mat-menu-item>Lista de Presentes</button></a>
+        <a href="#confirmacao"><button mat-menu-item>Confirme a Presença</button></a>
+        <a href="#duvidas"><button mat-menu-item>Dúvidas</button></a>
         <button mat-menu-item (click)="abrirCarrinho()" *ngIf="ItensSelecionadosService.obtemCarrinho().length > 0">
             <a>Carrinho</a>
         </button>

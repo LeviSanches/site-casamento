@@ -1,4 +1,4 @@
-<div class="container">    
+<div class="container">
     <div class="content">
         <h1>Confirmação de presença</h1>
         <p *ngIf="mostrarFormulario">Faça parte da nossa história de amor, confirme sua presença.</p>
@@ -15,7 +15,8 @@
                 </mat-radio-group>
                 <mat-form-field>
                     <mat-label>Telefone</mat-label>
-                    <input matInput placeholder="ddd + número" mask="(00)00000-0000" formControlName="telefone" required>
+                    <input matInput placeholder="ddd + número" mask="(00)00000-0000" formControlName="telefone"
+                        required>
                 </mat-form-field>
                 <mat-form-field>
                     <mat-label>Email</mat-label>
@@ -39,13 +40,11 @@
                         </mat-form-field>
                     </div>
                 </ng-container>
-                <button class="confirm-button" 
-                    (click)="confirm()" 
-                    [disabled]="presenca.controls.nome.invalid||
+                    <button class="confirm-button" (click)="confirm()" [disabled]="presenca.controls.nome.invalid||
                     presenca.controls.email.invalid ||
                     presenca.controls.telefone.invalid ||
                     presenca.controls.statusPresenca.invalid                    
-                    ">Confirmar</button>
+                    "><a href="#confirmacao">Confirmar</a></button>                
             </form>
         </div>
         <div>
