@@ -13,7 +13,8 @@
 }
 
 .content {
-    background: transparent;  
+    background: transparent;      
+    -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     padding: 20px;
     margin: 2rem;
@@ -70,6 +71,7 @@ mat-radio-group {
     background-color: #00000036;
     border-radius: 10px;
     padding: 4px;
+    font-family: 'Eb Garamond', serif;
 }
 
 a {    
