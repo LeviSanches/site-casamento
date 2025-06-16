@@ -117,7 +117,7 @@
         padding: 3rem 6rem;
     }
     .texto-container p{
-        font-size: 1.3rem;
+        font-size: 1.4rem;
     }
 
     .texto-container img {
@@ -142,15 +142,11 @@
         padding: 4rem 10rem;
     }
     .texto-container p{
-        font-size: 1.8rem;
+        font-size: 1.7rem;
     }
 
     .texto-container img {
         width: 50%;
     }
-
-}
-
-@media (min-width: 1200px) {
 
 }

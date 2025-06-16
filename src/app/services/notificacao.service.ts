@@ -11,7 +11,7 @@ export class NotificacaoService {
   notificar(mensagem: string): void {
     this.snackBar.open(mensagem, 'Ok', {
       duration: 3000,
-      verticalPosition: "top",
+      verticalPosition: "bottom",
       horizontalPosition: "center"
     });
   }
@@ -19,7 +19,7 @@ export class NotificacaoService {
   notificarLonga(mensagem: string): void {
     this.snackBar.open(mensagem, 'Ok', {
       duration: 15000,
-      verticalPosition: "top",
+      verticalPosition: "bottom",
       horizontalPosition: "center"
     });
   }

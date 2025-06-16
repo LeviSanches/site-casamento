@@ -14,8 +14,9 @@
 
 :root {
     --primary-color: #f6f2e7;
-    --secondary-color: #557c70;
-    --text-color: #a1775a;
+    /*--secondary-color: #557c70;*/
+    --secondary-color: #003057;
+    --text-color: #ad4c38;
   }
 
   html {

@@ -3,6 +3,23 @@
     padding: 1rem 1rem;
 }
 
+.mat-accordion {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.example-headers-align .mat-expansion-panel-header-description {
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.example-headers-align .mat-mdc-form-field+.mat-mdc-form-field {
+    margin-left: 8px;
+}
+
+
 h1 {
     font-size: 2rem;
     color: var(--text-color)
@@ -14,5 +31,79 @@ h2 {
 }
 
 p {
-    color: var(--secondary-color);
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.0rem;
+    }
+
+    p {
+        font-size: .9rem
+    }
+}
+
+@media ((min-width: 576px) and (max-width: 767px)) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.0rem;
+    }
+
+    p {
+        font-size: .9rem
+    }
+}
+
+
+@media ((min-width: 768px) and (max-width: 991px)) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.0rem;
+    }
+
+    p {
+        font-size: .9rem
+    }
+}
+
+
+@media ((min-width: 992px) and (max-width: 1199px)) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 1rem
+    }
+}
+
+
+@media (min-width: 1200px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 1rem
+    }
 }
