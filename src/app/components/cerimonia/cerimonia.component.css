@@ -9,10 +9,6 @@
     width: 100%;
 }
 
-.texto-container p {
-    padding: 0 12%;
-}
-
 .localizacao-container {
     display: flex;
     flex-direction: column;
@@ -26,7 +22,7 @@ a {
 }
 
 h1 {
-    color: var(--secondary-color);
+    color: var(--text-color);
     padding: 2rem;
     font-size: 3rem;
     text-align: center;
@@ -36,7 +32,7 @@ h1 {
 
 p {
     font-size: 1.8rem;
-    color: var(--secondary-color);
+    color: var(--text-color);
     text-align: center;
     font-family: "Eb Garamond", serif;
     margin: 0 4rem;
@@ -48,8 +44,9 @@ img {
 
 @media ( max-width: 576px) {
     p {
-        font-size: 1rem;
-        padding: 1rem 1rem;
+        font-size: 1.2rem;
+        padding: 1rem;
+        margin: 0 1rem;
     }
 }
 

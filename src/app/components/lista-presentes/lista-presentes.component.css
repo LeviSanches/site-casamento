@@ -67,7 +67,7 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 20px;
   transition: transform 0.2s;
-  background-color: #a1785a23;
+  background-color: #a1785a63;
 }
 
 .item:hover {
@@ -82,13 +82,14 @@
 }
 
 .item h2 {
-  font-size: 1.25rem;
-  color: #333333;
+  font-size: 1.1rem;
+  color: var(--text-color);
   margin: 10px 0;
+  text-align: center;
 }
 
 .item p {
-  color: #6c757d;
+  color: var(--secondary-color);
   margin: 5px 0;
 }
 
