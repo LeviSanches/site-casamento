@@ -24,39 +24,67 @@ export class ModalStatusPagamentoComponent {
     mensagem: '',
     produtos: []
   };
-  
+
   ngOnInit() {
     const urlParams = new URLSearchParams(window.location.search);
     const status = urlParams.get('status');
-    const preferencia = urlParams.get('preference_id');
-    console.log('status do pagamento:', status);
+    const paymentId = urlParams.get('payment_id');
+    const preferenceId = urlParams.get('preference_id');
 
-    this.pagamentoService.buscarPagamento(preferencia).subscribe({
+    this.pagamentoService.buscarInformacoesConvidado(preferenceId).subscribe({
       next: (res: any) => {
         this.dadosPagamento.nomeConvidado = res.payer.name;
         this.dadosPagamento.email = res.payer.email;
         this.dadosPagamento.telefone = `${res.payer.phone.area_code}${res.payer.phone.number}`;
         this.dadosPagamento.mensagem = res.additional_info
-        const produtos: any = res.items;
-        for(let i = 0; i < produtos.length; i++) {
+
+        const produtos: any[] = res.items;
+        produtos.forEach(p => {
           this.dadosPagamento.produtos?.push({
-            id: produtos[i].id,
-            nome: produtos[i].title,
-            preco: produtos[i].unit_price,
-            imagem: produtos[i].picture_url,
-            disponivel: produtos[i].available_quantity,
-            categoria: produtos[i].category_id,
-            quantidade: produtos[i].quantity
-           });
-        }
+            id: p.id,
+            nome: p.title,
+            preco: p.unit_price,
+            imagem: p.picture_url,
+            disponivel: p.available_quantity,
+            categoria: p.category_id,
+            quantidade: p.quantity
+          })
+        })
+      }
+    })
+
+    this.pagamentoService.buscarPagamento(paymentId).subscribe({
+      next: (res: any) => {
         switch (status) {
           case 'approved':
             this.dadosPagamento.status = 'aprovado';
             this.notificacao.notificarLonga(this.dadosPagamento.nomeConvidado.trim() + Constantes.MSG_PAGAMENTO_APROVADO);
+            this.pagamentoService.salvarPagamento(this.dadosPagamento).subscribe({
+              next: (res) => {
+                console.log('dados de resposta: ', res);
+              },
+              error: (err) => {
+                console.log('erro ao salvar pagamento: ', err);
+              }
+            });
             break;
           case 'pending':
-            this.dadosPagamento.status = 'pendente';
-            this.notificacao.notificarLonga(this.dadosPagamento.nomeConvidado.trim() + Constantes.MSG_PAGAMENTO_PENDENTE);
+            if (res.status_detail === 'accredited') {
+              this.dadosPagamento.status = 'aprovado';
+              this.notificacao.notificarLonga(this.dadosPagamento.nomeConvidado.trim() + Constantes.MSG_PAGAMENTO_APROVADO);
+              this.pagamentoService.salvarPagamento(this.dadosPagamento).subscribe({
+                next: (res) => {
+                  console.log('dados de resposta: ', res);
+                },
+                error: (err) => {
+                  console.log('erro ao salvar pagamento: ', err);
+                }
+              });
+            }
+            else {
+              this.dadosPagamento.status = 'pendente';
+              this.notificacao.notificarLonga(this.dadosPagamento.nomeConvidado.trim() + Constantes.MSG_PAGAMENTO_PENDENTE);
+            }
             break;
           case 'failure':
             this.dadosPagamento.status = 'falhou'
@@ -67,20 +95,12 @@ export class ModalStatusPagamentoComponent {
             this.notificacao.notificarLonga(this.dadosPagamento.nomeConvidado.trim() + Constantes.MSG_PAGAMENTO_DESCONHECIDO);
             break;
         }
-        this.pagamentoService.salvarPagamento(this.dadosPagamento).subscribe({
-          next: (res) => {
-            console.log('dados de resposta: ', res);
-          },
-          error: (err) => {
-            console.log('erro ao salvar pagamento: ', err);
-          }
-        });
       },
       error: (err) => {
         console.log('erro', err);
       }
     }
-  );
+    );
   }
 
 }

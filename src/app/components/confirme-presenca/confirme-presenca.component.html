@@ -24,11 +24,11 @@
                 </mat-form-field>
                 <div class="count" *ngIf="verificaStatusPresenca()">
                     <span>Quantos acompanhantes?</span>
-                    <button mat-icon-button (click)="decrease()" [disabled]="count === 0">
+                    <button mat-icon-button (click)="decrease()" style="color: #f6f2e7;" [disabled]="count === 0">
                         <mat-icon>remove_circle_outline</mat-icon>
                     </button>
                     <span>{{ count }}</span>
-                    <button mat-icon-button (click)="increase()" [disabled]="count === 5">
+                    <button mat-icon-button (click)="increase()" style="color: #f6f2e7;" [disabled]="count === 5">
                         <mat-icon color="#ffffff">add_circle_outline</mat-icon>
                     </button>
                 </div>
