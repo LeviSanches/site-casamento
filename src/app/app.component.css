@@ -70,6 +70,15 @@ li {
     background-size: cover;
 }
 
+.parallax-3 {
+    background-image: url('/assets/IMG_0124.jpg');
+    height: 50%; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 
 footer {
     background-color: var(--primary-color);
@@ -193,7 +202,7 @@ footer hr {
 }
 
 @media only screen and (max-device-width: 768px) {
-    .parallax-1, .parallax-2 {
+    .parallax-1, .parallax-2, .parallax-3 {
       background-attachment: scroll;
     }
   }

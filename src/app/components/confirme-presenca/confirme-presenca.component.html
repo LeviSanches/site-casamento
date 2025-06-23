@@ -32,7 +32,7 @@
                         <mat-icon color="#ffffff">add_circle_outline</mat-icon>
                     </button>
                 </div>
-                <ng-container formArrayName="acompanhantes" *ngIf="count > 0">
+                <ng-container formArrayName="acompanhantes" *ngIf="count > 0 && verificaStatusPresenca()">
                     <div *ngFor="let acompanhante of numAcompanhantes let i = index">
                         <mat-form-field [formGroupName]="i">
                             <mat-label>Nome do Acompanhante {{ i + 1 }}</mat-label>

@@ -1,0 +1,152 @@
+.contador-wrapper {
+  text-align: center;
+  font-family: 'Lora', serif;
+  padding: 40px 20px;
+}
+
+.titulo-contador {
+    font-family: 'Amoresa', serif;
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 30px;
+}
+
+.blocos-tempo {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.bloco {
+  background-color: #ffffff;
+  border: 2px solid var(--text-color);
+  border-radius: 12px;
+  padding: 20px 25px;
+  width: 100px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+}
+
+.numero {
+  font-size: 3rem;
+  color: var(--text-color);
+  font-weight: bold;
+  font-family: EbGaramond, serif;;
+}
+
+.rotulo {
+  font-size: 1rem;
+  color: var(--secondary-color);
+  margin-top: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: EbGaramond, serif;
+}
+
+
+@media (max-width: 480px) {
+  .blocos-tempo {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bloco {
+    width: 80%;
+    max-width: 200px;
+  }
+
+  .numero {
+    font-size: 2.5rem;
+  }
+
+  .rotulo {
+    font-size: 0.9rem;
+  }
+
+  .titulo-contador {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .blocos-tempo {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bloco {
+    width: 80%;
+    max-width: 200px;
+  }
+
+  .numero {
+    font-size: 2.5rem;
+  }
+
+  .rotulo {
+    font-size: 0.9rem;
+  }
+
+  .titulo-contador {
+    font-size: 2rem;
+  }
+}
+
+@media ((min-width: 576px) and (max-width: 767px)) {
+  .blocos-tempo {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bloco {
+    width: 80%;
+    max-width: 200px;
+  }
+
+  .numero {
+    font-size: 2.6rem;
+  }
+
+  .rotulo {
+    font-size: 1rem;
+  }
+
+  .titulo-contador {
+    font-size: 2.1rem;
+  }
+}
+
+
+@media ((min-width: 768px) and (max-width: 991px)) {
+  .blocos-tempo {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bloco {
+    width: 80%;
+    max-width: 200px;
+  }
+
+  .numero {
+    font-size: 2.7rem;
+  }
+
+  .rotulo {
+    font-size: 1.1rem;
+  }
+
+  .titulo-contador {
+    font-size: 2.2rem;
+  }
+}
+
+
+@media ((min-width: 992px) and (max-width: 1199px)) {
+  
+}
+
+
+@media (min-width: 1200px) {
+  
+}

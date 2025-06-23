@@ -47,7 +47,7 @@ export class ConfirmePresencaComponent {
 
   presenca = this.formBuilder.group({
     nome: ['', Validators.required],
-    email: ['', Validators.required],
+    email: [''],
     telefone: ['', Validators.required],
     statusPresenca: ['', Validators.required],
     acompanhantes: this.formBuilder.array([
