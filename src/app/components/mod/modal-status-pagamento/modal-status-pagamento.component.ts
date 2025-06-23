@@ -55,16 +55,17 @@ export class ModalStatusPagamentoComponent {
 
     this.pagamentoService.buscarPagamento(paymentId).subscribe({
       next: (res: any) => {
+        const newUrl = window.location.protocol + "//" + window.location.host;
         switch (status) {
           case 'approved':
-            this.dadosPagamento.status = 'aprovado';
-            this.notificacao.notificarLonga(this.dadosPagamento.nomeConvidado.trim() + Constantes.MSG_PAGAMENTO_APROVADO);
+            this.dadosPagamento.status = 'aprovado';     
+            this.notificacao.notificarLonga(this.dadosPagamento.nomeConvidado.trim() + Constantes.MSG_PAGAMENTO_APROVADO);       
             this.pagamentoService.salvarPagamento(this.dadosPagamento).subscribe({
-              next: (res) => {
-                console.log('dados de resposta: ', res);
+              next: (res) => {                
+                window.history.pushState({ path: newUrl }, '', newUrl);
               },
-              error: (err) => {
-                console.log('erro ao salvar pagamento: ', err);
+              error: (err) => {                
+                window.history.pushState({ path: newUrl }, '', newUrl);
               }
             });
             break;
@@ -73,11 +74,11 @@ export class ModalStatusPagamentoComponent {
               this.dadosPagamento.status = 'aprovado';
               this.notificacao.notificarLonga(this.dadosPagamento.nomeConvidado.trim() + Constantes.MSG_PAGAMENTO_APROVADO);
               this.pagamentoService.salvarPagamento(this.dadosPagamento).subscribe({
-                next: (res) => {
-                  console.log('dados de resposta: ', res);
+                next: (res) => {                  
+                  window.history.pushState({ path: newUrl }, '', newUrl);
                 },
-                error: (err) => {
-                  console.log('erro ao salvar pagamento: ', err);
+                error: (err) => {                  
+                  window.history.pushState({ path: newUrl }, '', newUrl);
                 }
               });
             }
@@ -88,11 +89,13 @@ export class ModalStatusPagamentoComponent {
             break;
           case 'failure':
             this.dadosPagamento.status = 'falhou'
-            this.notificacao.notificarLonga(this.dadosPagamento.nomeConvidado.trim() + Constantes.MSG_PAGAMENTO_FALHOU);
+            this.notificacao.notificarLonga(this.dadosPagamento.nomeConvidado.trim() + Constantes.MSG_PAGAMENTO_FALHOU);            
+            window.history.pushState({ path: newUrl }, '', newUrl);
             break;
           default:
             this.dadosPagamento.status = 'desconhecido';
             this.notificacao.notificarLonga(this.dadosPagamento.nomeConvidado.trim() + Constantes.MSG_PAGAMENTO_DESCONHECIDO);
+            window.history.pushState({ path: newUrl }, '', newUrl);
             break;
         }
       },
