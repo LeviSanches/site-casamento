@@ -11,6 +11,10 @@ a {
     color: var(--text-color);
 }
 
+a button {
+    color: var(--text-color);
+}
+
 ul {
     display: flex;
     justify-content: center;
@@ -59,6 +63,15 @@ li {
 
 .parallax-2 {
     background-image: url('/assets/IMG_0064.jpg');
+    height: 50%; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax-3 {
+    background-image: url('/assets/IMG_0124.jpg');
     height: 50%; 
     background-attachment: fixed;
     background-position: center;
@@ -134,7 +147,9 @@ footer hr {
     }
 
     header button {
-        display: block
+        display: block;
+        color: var(--text-color)
+
     }
 }
 
@@ -149,7 +164,8 @@ footer hr {
     }
 
     header button {
-        display: block
+        display: block;
+        color: var(--text-color)
     }
 
 }
@@ -186,7 +202,7 @@ footer hr {
 }
 
 @media only screen and (max-device-width: 768px) {
-    .parallax-1, .parallax-2 {
+    .parallax-1, .parallax-2, .parallax-3 {
       background-attachment: scroll;
     }
   }

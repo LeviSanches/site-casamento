@@ -18,7 +18,7 @@ export class PagamentoService {
           'Content-Type': 'application/json',
         });
 
-    return this.http.post<string>(`${this.apiUrl}/pagamento`, data, { headers });
+    return this.http.post<string>(`${this.apiUrl}/payment`, data, { headers });
   }
 
   salvarPagamento(data: IPagamento): Observable<string> {
@@ -26,15 +26,24 @@ export class PagamentoService {
           'Content-Type': 'application/json',
         });
 
-    return this.http.post<string>(`${this.apiUrl}/pagamento/save`, data, { headers });
+    return this.http.post<string>(`${this.apiUrl}/payment/save`, data, { headers });
   }
 
-  buscarPagamento(preferencia: string | null): Observable<string> {
+  buscarPagamento(paymentId: string | null): Observable<string> {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
-      'preferenceId': preferencia || '',
+      'paymentId': paymentId || ''
     });
 
-    return this.http.get<string>(`${this.apiUrl}/pagamento`, { headers });
+    return this.http.get<string>(`${this.apiUrl}/payment`, { headers });
+  }
+
+  buscarInformacoesConvidado(preferenceId: string | null): Observable<string> {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'preferenceId': preferenceId || ''
+    })
+
+    return this.http.get<string>(`${this.apiUrl}/payment/invited`, {headers})
   }
 }

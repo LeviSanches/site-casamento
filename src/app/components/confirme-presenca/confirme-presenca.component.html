@@ -1,4 +1,4 @@
-<div class="container">    
+<div class="container">
     <div class="content">
         <h1>Confirmação de presença</h1>
         <p *ngIf="mostrarFormulario">Faça parte da nossa história de amor, confirme sua presença.</p>
@@ -15,7 +15,8 @@
                 </mat-radio-group>
                 <mat-form-field>
                     <mat-label>Telefone</mat-label>
-                    <input matInput placeholder="ddd + número" mask="(00)00000-0000" formControlName="telefone" required>
+                    <input matInput placeholder="ddd + número" mask="(00)00000-0000" formControlName="telefone"
+                        required>
                 </mat-form-field>
                 <mat-form-field>
                     <mat-label>Email</mat-label>
@@ -23,15 +24,15 @@
                 </mat-form-field>
                 <div class="count" *ngIf="verificaStatusPresenca()">
                     <span>Quantos acompanhantes?</span>
-                    <button mat-icon-button (click)="decrease()" [disabled]="count === 0">
+                    <button mat-icon-button (click)="decrease()" style="color: #f6f2e7;" [disabled]="count === 0">
                         <mat-icon>remove_circle_outline</mat-icon>
                     </button>
                     <span>{{ count }}</span>
-                    <button mat-icon-button (click)="increase()" [disabled]="count === 5">
+                    <button mat-icon-button (click)="increase()" style="color: #f6f2e7;" [disabled]="count === 5">
                         <mat-icon color="#ffffff">add_circle_outline</mat-icon>
                     </button>
                 </div>
-                <ng-container formArrayName="acompanhantes" *ngIf="count > 0">
+                <ng-container formArrayName="acompanhantes" *ngIf="count > 0 && verificaStatusPresenca()">
                     <div *ngFor="let acompanhante of numAcompanhantes let i = index">
                         <mat-form-field [formGroupName]="i">
                             <mat-label>Nome do Acompanhante {{ i + 1 }}</mat-label>
@@ -39,13 +40,11 @@
                         </mat-form-field>
                     </div>
                 </ng-container>
-                <button class="confirm-button" 
-                    (click)="confirm()" 
-                    [disabled]="presenca.controls.nome.invalid||
+                    <button class="confirm-button" (click)="confirm()" [disabled]="presenca.controls.nome.invalid||
                     presenca.controls.email.invalid ||
                     presenca.controls.telefone.invalid ||
                     presenca.controls.statusPresenca.invalid                    
-                    ">Confirmar</button>
+                    "><a href="#confirmacao">Confirmar</a></button>                
             </form>
         </div>
         <div>

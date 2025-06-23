@@ -13,6 +13,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { ItensSelecionadosComponent } from './components/itens-selecionados/itens-selecionados.component';
+import { ContagemRegressivaComponent } from "./components/contagem-regressiva/contagem-regressiva.component";
 
 @Component({
   selector: 'app-root',
@@ -27,7 +28,7 @@ import { ItensSelecionadosComponent } from './components/itens-selecionados/iten
     MatButtonModule,
     MatMenuModule,
     MatIconModule,
-    RouterModule],
+    RouterModule, ContagemRegressivaComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
