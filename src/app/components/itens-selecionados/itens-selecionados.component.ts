@@ -62,7 +62,7 @@ export class ItensSelecionadosComponent {
 
   informacoes = this.formBuilder.group({
     nome: ['', Validators.required],
-    email: ['', Validators.required],
+    email: [''],
     telefone: ['', Validators.required],
     mensagem: [''],
   });
