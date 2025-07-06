@@ -9,6 +9,14 @@
     width: 100%;
 }
 
+.local-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
 .localizacao-container {
     display: flex;
     flex-direction: column;

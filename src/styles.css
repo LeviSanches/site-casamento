@@ -35,7 +35,7 @@ html {
 html, body { height: 100%; }
 body { margin: 0; }
 
-h1 {
+h1, h3 {
   font-family: Amoresa, serif;
 }
 
