@@ -1,7 +1,14 @@
-
+:host ::ng-deep .mat-dialog-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  margin: auto;
+  border-radius: 12px;
+}
 
 .container {
-    background-image: url(../../../assets/IMG_0086.jpg);
+    background-image: url(/assets/IMG_0086.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -9,7 +16,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: var(--primary-color);
+    color: var(--bege);
 }
 
 .content {
@@ -22,21 +29,21 @@
     width: 70vw;
     flex-direction: column;
     align-items: center;
-    color: var(--primary-color);
+    color: var(--bege);
     text-align: center;
     border-radius: 1rem;
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--bege);
 }
 
 
 h1 {
-    color: var(--primary-color);
+    color: var(--bege);
     font-size: 3rem;
 }
 
 p{
     font-size: 1.7rem;
-    color: var(--primary-color);
+    color: var(--bege);
 }
 
 .formulario {
@@ -64,7 +71,7 @@ mat-radio-group {
     display: flex;
     gap: 10px;
     align-items: center;
-    color: var(--primary-color);
+    color: var(--bege);
 }
 
 #texto_confirmacao {
@@ -74,23 +81,20 @@ mat-radio-group {
     font-family: 'Eb Garamond', serif;
 }
 
-a {    
-    text-decoration: none;
-    color: var(--primary-color);
-}
 .confirm-button {
-    background-color: var(--secondary-color);    
+    background-color: var(--azul);  
+    color: var(--bege);  
     margin: 0 2rem;
     display: block;
     padding: 10px;
-    background-color: var(--secondary-color);    
+    background-color: var(--azul);    
     border: none;
     cursor: pointer;
     transition: background-color 0.2s;
 }
 
 .confirm-button:hover {
-    background-color: var(--text-color);
+    background-color: var(--terracota);
 }
 
 .confirm-button.disabled {

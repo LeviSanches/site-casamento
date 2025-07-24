@@ -13,7 +13,7 @@
 
 p {
     font-size: 1rem;
-    color: var(--text-color);
+    color: var(--terracota);
     text-align: center;
   }
   
@@ -30,7 +30,7 @@ p {
     text-align: center;
     font-size: 1.8rem;
     margin-bottom: 20px;
-    color: var(--text-color);
+    color: var(--terracota);
   }
   
   ul {
@@ -44,7 +44,7 @@ p {
     justify-content: space-between;
     padding: 10px 0;
     border-bottom: 1px solid #dee2e6;
-    color: var(--text-color);
+    color: var(--terracota);
     font-size: 1.2rem;
   }
   
@@ -68,7 +68,7 @@ p {
   .remove-button {
     background: none;
     border: none;
-    color: var(--text-color);
+    color: var(--terracota);
     cursor: pointer;
     transition: color 0.3s ease;
   }
@@ -84,7 +84,7 @@ p {
   .empty-cart {
     text-align: center;
     margin-top: 20px;
-    color: var(--text-color);
+    color: var(--terracota);
     font-size: 2rem;
   }
   
@@ -92,7 +92,7 @@ p {
     text-align: right;
     font-size: 1.5rem;
     margin-top: 20px;
-    color: var(--secondary-color);
+    color: var(--azul);
   }
   
   .botton-line {
@@ -102,7 +102,7 @@ p {
   }
   
   .button {
-    background: var(--secondary-color);
+    background: var(--azul);
     color: white;
     border: none;
     padding: 10px 20px;
@@ -115,7 +115,7 @@ p {
   }
   
   #button-voltar {
-    background: var(--text-color);
+    background: var(--terracota);
   }
   
   #button-voltar:hover {
@@ -144,18 +144,18 @@ p {
     display: flex;
     justify-content: space-between;
     background-color: #ffffff00;
-    color: var(--text-color);
+    color: var(--terracota);
     border: none;
     width: 10rem;
     padding: 10px 10px;
     margin: 1rem;
     cursor: pointer;
     transition: background-color 0.3s;
-    border: 1px solid var(--text-color);
+    border: 1px solid var(--terracota);
   }
   
   .payment-button:hover {
-    background-color: var(--secondary-color);
+    background-color: var(--azul);
   }
   
   .payment-button:active {

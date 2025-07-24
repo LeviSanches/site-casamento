@@ -20,7 +20,7 @@
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
-  color: var(--secondary-color);
+  color: var(--azul);
   font-family: EbGaramond, serif;
   text-align: center;
   padding: 0 5rem;
@@ -30,12 +30,12 @@
   text-align: center;
   margin-bottom: 40px;
   font-size: 2rem;
-  color: var(--secondary-color);
+  color: var(--azul);
   font-family: Amoresa, serif;
 }
 
 .ordenacao {
-  background-color: var(--primary-color);
+  background-color: var(--bege);
   border: 1px solid #e0e0e0;
   margin: 0 3rem;
   display: flex;
@@ -83,13 +83,13 @@
 
 .item h2 {
   font-size: 1.1rem;
-  color: var(--text-color);
+  color: var(--terracota);
   margin: 10px 0;
   text-align: center;
 }
 
 .item p {
-  color: var(--secondary-color);
+  color: var(--azul);
   margin: 5px 0;
 }
 
@@ -97,7 +97,7 @@ button {
   display: block;
   width: 100%;
   padding: 10px;
-  background-color: var(--secondary-color);
+  background-color: var(--azul);
   color: white;
   border: none;
   cursor: pointer;
@@ -105,7 +105,7 @@ button {
 }
 
 button:hover {
-  background-color: var(--text-color);
+  background-color: var(--terracota);
 }
 
 button.disabled {
@@ -127,7 +127,7 @@ button.disabled {
 }
 
 .paginacao ::ng-deep .ngx-pagination .current {
-  background: var(--secondary-color);
+  background: var(--azul);
   border-radius: 50%;
 }
 

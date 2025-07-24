@@ -1,5 +1,5 @@
 .compact-player {
-  background: var(--primary-color);
+  background: var(--bege);
   border-radius: 12px;
   padding: 8px 12px;
   display: flex;
@@ -10,7 +10,7 @@
 }
 
 button {
-  background-color: var(--text-color);;
+  background-color: var(--terracota);;
   border: none;
   border-radius: 50%;
   padding: 8px 10px;
@@ -22,10 +22,10 @@ button {
 }
 
 button:hover {
-  background-color: var(--secondary-color);
+  background-color: var(--azul);
 }
 
 input[type="range"] {
   width: 100px;
-  accent-color: var(--text-color);
+  accent-color: var(--terracota);
 }
