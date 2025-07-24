@@ -1,0 +1,24 @@
+<div class="compact-player">
+  <div class="track-info">
+    <span>{{ tracks[currentTrackIndex].name }}</span>
+  </div>
+  <button (click)="prevTrack()" aria-label="Play/Pause">
+    <i class="fas fa-backward"></i>
+  </button>
+  <button (click)="togglePlay()" aria-label="Play/Pause">
+    <i [class]="isPlaying ? 'fas fa-pause' : 'fas fa-play'"></i>
+  </button>
+  <button (click)="nextTrack()" aria-label="Play/Pause">
+    <i class="fa-solid fa-forward"></i>
+  </button>
+
+  <input
+    type="range"
+    min="0"
+    max="1"
+    step="0.01"
+    [value]="volume"
+    (input)="setVolume($event)"
+    aria-label="Controle de volume"
+  />
+</div>

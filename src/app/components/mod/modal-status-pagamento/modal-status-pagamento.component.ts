@@ -3,13 +3,11 @@ import { NotificacaoService } from '../../../services/notificacao.service';
 import { PagamentoService } from '../../../services/pagamento.service';
 import { Constantes } from '../../../constants/Constantes';
 import { IPagamento } from '../../../interfaces/iPagamento';
-import { IListaPresentes } from '../../../interfaces/iListaPresentes';
 
 @Component({
   selector: 'app-modal-status-pagamento',
   imports: [],
-  templateUrl: './modal-status-pagamento.component.html',
-  styleUrl: './modal-status-pagamento.component.css'
+  templateUrl: './modal-status-pagamento.component.html'
 })
 export class ModalStatusPagamentoComponent {
 
@@ -63,6 +61,12 @@ export class ModalStatusPagamentoComponent {
             this.pagamentoService.salvarPagamento(this.dadosPagamento).subscribe({
               next: (res) => {                
                 window.history.pushState({ path: newUrl }, '', newUrl);
+                this.pagamentoService.notificarPagamento(`🥳🥳 ${this.dadosPagamento.nomeConvidado} nos deu um presente de casamento! 🥳🥳`)
+                  .subscribe({
+                    error: () => {
+                      console.log("erro ao notificar pagamento...");
+                    }
+                  });
               },
               error: (err) => {                
                 window.history.pushState({ path: newUrl }, '', newUrl);
@@ -70,7 +74,7 @@ export class ModalStatusPagamentoComponent {
             });
             break;
           case 'pending':
-            if (res.status_detail === 'accredited') {
+            if (res.status === 'approved' || res.status === 'authorized') {
               this.dadosPagamento.status = 'aprovado';
               this.notificacao.notificarLonga(this.dadosPagamento.nomeConvidado.trim() + Constantes.MSG_PAGAMENTO_APROVADO);
               this.pagamentoService.salvarPagamento(this.dadosPagamento).subscribe({
@@ -85,6 +89,7 @@ export class ModalStatusPagamentoComponent {
             else {
               this.dadosPagamento.status = 'pendente';
               this.notificacao.notificarLonga(this.dadosPagamento.nomeConvidado.trim() + Constantes.MSG_PAGAMENTO_PENDENTE);
+              window.history.pushState({ path: newUrl }, '', newUrl);
             }
             break;
           case 'failure':
@@ -102,8 +107,7 @@ export class ModalStatusPagamentoComponent {
       error: (err) => {
         console.log('erro', err);
       }
-    }
-    );
+    });
   }
 
 }

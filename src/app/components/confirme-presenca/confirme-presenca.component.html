@@ -1,8 +1,8 @@
 <div class="container">
     <div class="content">
         <h1>Confirmação de presença</h1>
-        <p *ngIf="mostrarFormulario">Faça parte da nossa história de amor, confirme sua presença.</p>
-        <div class="formulario" *ngIf="mostrarFormulario">
+        <p>Faça parte da nossa história de amor, confirme sua presença.</p>
+        <div class="formulario">
             <form class="informacoes-form" [formGroup]="presenca">
                 <ng-template matStepLabel>Informações</ng-template>
                 <mat-form-field>
@@ -44,11 +44,8 @@
                     presenca.controls.email.invalid ||
                     presenca.controls.telefone.invalid ||
                     presenca.controls.statusPresenca.invalid                    
-                    "><a href="#confirmacao">Confirmar</a></button>                
-            </form>
-        </div>
-        <div>
-            <p id="texto_confirmacao" *ngIf="!mostrarFormulario">{{ mensagemPosConfirmacao() }}</p>
-        </div>
+                    ">Confirmar</button>            
+            </form>            
+        </div>        
     </div>
 </div>

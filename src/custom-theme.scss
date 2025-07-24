@@ -5,8 +5,8 @@
 
 :root {
   @include mat.radio-overrides((
-    label-text-color: var(--primary-color),
-    selected-icon-color: var(--primary-color)
+    label-text-color: var(--bege),
+    selected-icon-color: var(--bege)
   ));
 }
 

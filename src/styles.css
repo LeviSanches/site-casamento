@@ -13,10 +13,9 @@
 }
 
 :root {
-    --primary-color: #f6f2e7;
-    /*--secondary-color: #557c70;*/
-    --secondary-color: #003057;
-    --text-color: #ad4c38;
+    --bege: #f6f2e7;
+    --azul: #003057;
+    --terracota: #ad4c38;
   }
 
   html {
@@ -30,15 +29,14 @@
   }
 
 html {
-    background-color: var(--primary-color);
+    background-color: var(--bege);
 }
-html, body { height: 100%; }
-body { margin: 0; }
+html, body { height: 100%; margin: 0;}
 
-h1 {
+h1, h3 {
   font-family: Amoresa, serif;
 }
 
-p, h2 {
+p, h2, span {
   font-family: EbGaramond, sans-serif;
 }

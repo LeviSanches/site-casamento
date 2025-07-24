@@ -27,8 +27,8 @@
 
 .texto-data {
     position: absolute;
-    top: 87%;
-    left: 20%;
+    top: 88%;
+    left: 26%;
     transform: translate(-50%, -50%);
     color: #fff2e3;
     font-family: "Be Vietnam Pro", serif;
@@ -46,7 +46,7 @@
 
 .texto-container p{
     font-size: 2rem;
-    color: var(--secondary-color);
+    color: var(--azul);
     text-align: center;
     font-family: "Eb Garamond", serif;
 }

@@ -11,6 +11,10 @@ import { NotificacaoService } from '../../services/notificacao.service';
 import { IConvidado } from '../../interfaces/iConvidado';
 import { ConfirmarPresencaService } from '../../services/confirmarPresenca.service';
 import { Constantes } from '../../constants/Constantes';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { ModalMsgConfirmacaoComponent } from '../mod/modal-msg-confirmacao/modal-msg-confirmacao.component';
+import { ScrollRestorerService } from '../../services/scrollRestorer.service';
+import { Overlay } from '@angular/cdk/overlay';
 
 @Component({
   selector: 'app-confirme-presenca',
@@ -30,15 +34,19 @@ import { Constantes } from '../../constants/Constantes';
 })
 export class ConfirmePresencaComponent {
 
+  dialog: MatDialog = inject(MatDialog);
   private formBuilder = inject(FormBuilder);
   private notificacao = inject(NotificacaoService);
   private apiService = inject(ConfirmarPresencaService);
-
+  private scrollService = inject(ScrollRestorerService);
+  private overlay = inject(Overlay);
+  
   convidado: IConvidado = {
     nome: '',
     email: '',
     statusPresenca: false,
     acompanhantes: [],
+    telefone: ''
   };
 
   count: number = 0;
@@ -59,7 +67,23 @@ export class ConfirmePresencaComponent {
     ])
   });
 
-  mostrarFormulario: boolean = true;
+  openModal(): void {
+      const dialogConfig = new MatDialogConfig();
+      this.scrollService.save();
+      dialogConfig.width = '600px';
+      dialogConfig.height = 'auto';   
+      dialogConfig.autoFocus = false;
+      dialogConfig.restoreFocus = false;
+      dialogConfig.scrollStrategy = this.overlay.scrollStrategies.noop();
+      dialogConfig.data = {
+        convidado: this.convidado,
+        mensagem: this.mensagemPosConfirmacao()
+      };
+      this.dialog.open(ModalMsgConfirmacaoComponent, dialogConfig)
+      .afterClosed().subscribe(() => {
+        this.scrollService.restore();
+      });
+    }
 
   mensagemPosConfirmacao(): string {
     let nomes = this.convidado.nome?.split(" ");
@@ -94,18 +118,33 @@ export class ConfirmePresencaComponent {
       nome: this.presenca.controls.nome.value,
       email: this.presenca.controls.email.value,
       statusPresenca: this.verificaStatusPresenca(),
+      telefone: this.presenca.controls.telefone.value,
       acompanhantes: acompanhantes
     }
     this.apiService.confirmarPresenca(this.convidado).subscribe({
       next: () => {
-        this.notificacao.notificar("Confirmação de presença registrada com sucesso!");        
-        this.mostrarFormulario = false
+        this.notificacao.notificar("Confirmação de presença registrada com sucesso!"); 
+        this.openModal(); 
       },
       error: (error) => {
         console.error('Erro ao enviar dados:', error);
         this.notificacao.notificarLonga("Houve um erro ao confirmar a presença, tente novamente, se o problema persistir entre em contato com os noivos")
       },
-      complete: () => this.presenca.reset()
+      complete: () => {
+        this.apiService
+          .notificarPresenca(
+            `${this.convidado.nome} vai ao casamento? ${this.presenca.controls.statusPresenca.value} \nTelefone: ${this.convidado.telefone}`)
+              .subscribe({
+                error: () => {
+                  console.log("erro ao enviar notificação");
+                }
+              });
+        this.presenca.reset();
+        this.presenca.controls.email.setValue('');
+        this.presenca.controls.acompanhantes.controls.forEach(control => {
+          control.get('nome')?.setValue('');
+        })
+      }
     });
 
   }

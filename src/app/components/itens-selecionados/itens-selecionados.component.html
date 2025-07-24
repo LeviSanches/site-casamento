@@ -4,7 +4,7 @@
     </div>
     <mat-stepper #stepper>
         <mat-step>
-            <ng-template matStepLabel>Carrinho</ng-template>
+            <ng-template matStepLabel></ng-template>
             <ul>
                 <li *ngFor="let presente of presenteSelecionado">
                     <img [src]="presente.imagem" alt="">
@@ -28,7 +28,7 @@
 
         <mat-step [stepControl]="informacoes" errorMessage="Preencha as informacoes obrigatórias">
             <form class="informacoes-form" [formGroup]="informacoes">
-                <ng-template matStepLabel>Informações</ng-template>
+                <ng-template matStepLabel></ng-template>
                 <mat-form-field>
                     <mat-label>Nome</mat-label>
                     <input matInput placeholder="Digite seu nome completo" formControlName="nome" required>
@@ -55,10 +55,10 @@
 
         <mat-step>
             <form [formGroup]="formaPagamento">
-                <ng-template matStepLabel>Pagamento</ng-template>
+                <ng-template matStepLabel></ng-template>
                 <ng-template matStepLabel>Escolha a forma de pagamento</ng-template>
                 <div class="payment-options">
-                    <button class="payment-button" (click)="comprar()">Efetuar Pagamento <i class="fa-brands fa-pix"></i></button>
+                    <button class="payment-button" (click)="comprar()">Efetuar Pagamento <i class="fa-solid fa-coins"></i></button>
                 </div>
                 <p>Após clicar no botão, você será redirecionado para a plataforma do Mercado Pago, onde poderá escolher a forma de pagamento que preferir.</p>
             </form>

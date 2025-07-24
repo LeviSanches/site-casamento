@@ -6,4 +6,5 @@ export interface IConvidado {
     email: string | null,
     statusPresenca: boolean,
     acompanhantes?: IAcompanhante[];
+    telefone: string | null;
 }

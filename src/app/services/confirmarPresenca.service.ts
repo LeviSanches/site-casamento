@@ -18,7 +18,15 @@ export class ConfirmarPresencaService {
       'Content-Type': 'application/json',
     });
 
-    return this.http.post<IConvidado>(`${this.url}/convidado`, data, { headers })
+    return this.http.post<IConvidado>(`${this.url}/invited`, data, { headers });
+  }
+
+  notificarPresenca(mensagem: string): Observable<string> {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json'
+  })
+
+    return this.http.post<string>(`${this.url}/invited/notify`, mensagem, { headers });
   }
 
 

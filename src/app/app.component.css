@@ -8,11 +8,11 @@ header {
 
 a {
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--terracota);
 }
 
 a button {
-    color: var(--text-color);
+    color: var(--terracota);
 }
 
 ul {
@@ -28,20 +28,29 @@ li {
     font-weight: 400;
     font-style: normal;
     text-transform: uppercase;
-    color: var(--text-color);
+    color: var(--terracota);
     cursor: pointer;
 }
 
 li i {
     font-size: 2rem;
-    color: var(--text-color);
+    color: var(--terracota);
+}
+
+.example-icon {
+    background-color: var(--terracota);
+    margin: 6px;
+}
+
+.icon-button {
+    color: var(--bege);
 }
 
 .badge-carrinho {
     position: absolute;
     top: -10px;
     right: -10px;
-    background-color: var(--secondary-color);
+    background-color: var(--azul);
     color: white;
     border-radius: 50%;
     padding: 5px 10px;
@@ -81,14 +90,14 @@ li {
 
 
 footer {
-    background-color: var(--primary-color);
+    background-color: var(--bege);
     padding: 20px 0;
     text-align: center;
-    color: var(--secondary-color);
+    color: var(--azul);
 }
 
 .footer-container {
-    background: linear-gradient(to bottom, var(--primary-color), white);
+    background: linear-gradient(to bottom, var(--bege), white);
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
@@ -121,7 +130,7 @@ footer {
 
 .footer-links a {
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--terracota);
 }
 
 .footer-links a:hover {
@@ -134,6 +143,11 @@ footer hr {
     border-top: 1px solid #ddd;
 }
 
+.player {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
 
 @media (max-width: 576px) {
     header {
@@ -148,7 +162,7 @@ footer hr {
 
     header button {
         display: block;
-        color: var(--text-color)
+        color: var(--terracota)
 
     }
 }
@@ -165,7 +179,7 @@ footer hr {
 
     header button {
         display: block;
-        color: var(--text-color)
+        color: var(--terracota)
     }
 
 }
@@ -182,7 +196,7 @@ footer hr {
 
     header button {
         display: block;
-        color: var(--text-color)
+        color: var(--terracota)
     }
 }
 
