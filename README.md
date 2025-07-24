@@ -21,7 +21,7 @@ Projetos pessoais só fazem sentido se contam uma história sobre você...
 
 ### 🛠 Tecnologias utilizadas
 
-- **Angular 17**
+- **Angular 19**
 - **TypeScript**
 - **SCSS**
 - **RxJS**
