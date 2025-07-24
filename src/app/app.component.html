@@ -1,7 +1,7 @@
 <header>
-    <button mat-icon-button class="example-icon" [matMenuTriggerFor]="menu">
-        <mat-icon>menu</mat-icon>
-    </button>
+    <button mat-icon-button class="example-icon" [matMenuTriggerFor]="menu" >
+        <mat-icon class="icon-button">menu</mat-icon>
+    </button>    
     <mat-menu #menu="matMenu">
         <a href="#inicio"><button mat-menu-item>Inicio</button></a>
         <a href="#casal"><button mat-menu-item>O Casal</button></a>
@@ -30,7 +30,6 @@
         </ul>
     </nav>
 </header>
-
 <section id="inicio">
     <app-inicio></app-inicio>
 </section>
@@ -77,5 +76,6 @@
       </div>
     </div>
   </footer>
-  
+
+<app-audio class="player"></app-audio>  
 <router-outlet></router-outlet>

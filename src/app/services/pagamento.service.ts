@@ -46,4 +46,12 @@ export class PagamentoService {
 
     return this.http.get<string>(`${this.apiUrl}/payment/invited`, {headers})
   }
+
+  notificarPagamento(message: string): Observable<string> {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json'
+    })
+
+    return this.http.post<string>(`${this.apiUrl}/payment/notify`, message, {headers})
+  }
 }

@@ -9,6 +9,8 @@ import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { ItensSelecionadosComponent } from '../itens-selecionados/itens-selecionados.component';
 import { NotificacaoService } from '../../services/notificacao.service';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { Overlay } from '@angular/cdk/overlay';
+import { ScrollRestorerService } from '../../services/scrollRestorer.service';
 
 
 @Component({
@@ -23,23 +25,29 @@ export class ListaPresentesComponent {
   itemService: ItensSelecionadosService = inject(ItensSelecionadosService);
   notificacao: NotificacaoService = inject(NotificacaoService);
   dialog: MatDialog = inject(MatDialog);
+  overlay: Overlay = inject(Overlay);
+  scrollService = inject(ScrollRestorerService);
 
   listaPresentes: IListaPresentes[] = [];
-  valorTotal: number = 0
-  p: number = 1;
+  pagina: number = 1;
 
   loading: boolean = false;
 
   openModal(): void {
     const dialogConfig = new MatDialogConfig();
-
+    this.scrollService.save();
     dialogConfig.width = '600px';
     dialogConfig.height = 'auto';
     dialogConfig.maxHeight = '90vh'; // Máximo de 90% da altura da viewport
     dialogConfig.panelClass = 'custom-dialog-container';
-
+    dialogConfig.autoFocus = false;
+    dialogConfig.restoreFocus = false;
+    dialogConfig.scrollStrategy = this.overlay.scrollStrategies.noop();
     this.loading = false;
-    this.dialog.open(ItensSelecionadosComponent, dialogConfig);
+    this.dialog.open(ItensSelecionadosComponent, dialogConfig)
+    .afterClosed().subscribe(() => {
+      this.scrollService.restore();
+    });
   }
 
   ngOnInit() {

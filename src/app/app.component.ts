@@ -14,6 +14,9 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { ItensSelecionadosComponent } from './components/itens-selecionados/itens-selecionados.component';
 import { ContagemRegressivaComponent } from "./components/contagem-regressiva/contagem-regressiva.component";
+import { AudioComponent } from './components/audio/audio.component';
+import { ScrollRestorerService } from './services/scrollRestorer.service';
+import { Overlay } from '@angular/cdk/overlay';
 
 @Component({
   selector: 'app-root',
@@ -28,7 +31,9 @@ import { ContagemRegressivaComponent } from "./components/contagem-regressiva/co
     MatButtonModule,
     MatMenuModule,
     MatIconModule,
-    RouterModule, ContagemRegressivaComponent],
+    RouterModule, 
+    ContagemRegressivaComponent,
+    AudioComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -36,19 +41,25 @@ export class AppComponent {
   ItensSelecionadosService: ItensSelecionadosService = inject(ItensSelecionadosService);
   itemService: ItensSelecionadosService = inject(ItensSelecionadosService);
   dialog: MatDialog = inject(MatDialog);
-
+  scrollService = inject(ScrollRestorerService);
+  overlay: Overlay = inject(Overlay);
   loading: boolean = false;
 
   openModal(): void {
     const dialogConfig = new MatDialogConfig();
-
+    this.scrollService.save();
     dialogConfig.width = '600px';
     dialogConfig.height = 'auto';
     dialogConfig.maxHeight = '90vh'; // Máximo de 90% da altura da viewport
     dialogConfig.panelClass = 'custom-dialog-container';
-
+    dialogConfig.autoFocus = false;
+    dialogConfig.restoreFocus = false;
+    dialogConfig.scrollStrategy = this.overlay.scrollStrategies.noop();
     this.loading = false;
-    this.dialog.open(ItensSelecionadosComponent, dialogConfig);
+    this.dialog.open(ItensSelecionadosComponent, dialogConfig)
+    .afterClosed().subscribe(() => {
+      this.scrollService.restore();
+    });  
   }
 
   abrirCarrinho(): void {
